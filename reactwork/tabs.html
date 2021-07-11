@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+     <!-- <link rel="stylesheet" type="text/css" href="css/main.css"> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://use.typekit.net/ipw5bij.css">
+    <style type="text/css">
+    input.slider__nav {
+        display: block !important;
+    }
+    input.slider__nav {
+    position: relative;
+    left: 1%;
+}
+    a.next {
+        position: absolute;
+        left: 33px;
+        font-size: 23px;
+        color: #0a0a0a;
+        top: 67%;
+        border-radius: 50%;
+        border: 1px solid #b5b0b0;
+        height: 32px;
+        padding: 0px;
+        width: 32px;
+        padding-left: 11px;
+    }
+    
+    a.prev {
+        position: absolute;
+        right: 33px;
+        font-size: 23px;
+        color: #0a0a0a;
+        top: 67%;
+        border-radius: 50%;
+        border: 1px solid #b5b0b0;
+        height: 32px;
+        padding: 0px;
+        width: 32px;
+        padding-left: 11px;
+    }
+    
+    .slider__nav {
+        width: 8px;
+        height: 8px;
+        margin: 2rem 12px;
+        border-radius: 50%;
+        z-index: 10;
+        outline: 6px solid #cacecc;
+        outline-offset: -6px;
+        box-shadow: 0 0 0 0 #333, 0 0 0 0 rgb(51 51 51 / 0%);
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    
+    input.slider__nav {
+        display: block !important;
+        position: relative;
+        border-radius: 50%;
+        bottom: 117px;
+    }
+    
+    a.next img {
+        width: 6px;
+        margin-bottom: 6px;
+    }
+
+section.container-fluid.w5 {
+    width: 100%;
+    height: 500px;
+    background-color: #1a1a1a;
+    position: relative;
+    margin-top: 100px;
+}
+
+
+
+.logo2 {
+    height: 100px;
+    
+    border-radius: 100px;
+    text-align: center;
+}
+
+div.number h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 19px;
+    line-height: 40px;
+    padding: 60px 0px;
+    font-weight: 400;
+}
+
+
+.foot {
+    padding: 60px 0px 60px 0px;
+}
+
+
+.underline{
+    text-decoration: underline;
+}
+
+    @media (max-width: 767px){
+        input.slider__nav {
+    display: block !important;
+    position: relative;
+    border-radius: 50%;
+    bottom: 95px;
+}
+    }
+    </style>
+</head>
+
+<body>
+    <section class="wrapp1">
+        <div class="container-fluid ten5">
+                        <div class="row">
+                <div class="col-md-12">
+                       <header class="header">
+                            <nav class="navbar">
+                                <div class="top_nav">
+                                    <div class="logo"><a href="#" class="nav_logo">Youniq.Art</a></div>
+                                    <div class="nav">
+                                        <ul class="nav_item">
+                                            <li class="list_item"><a href="#" class="nav_link">Finde deinen Style</a></li>
+                                            <li class="list_item"><a href="#" class="nav_link">Wie’s funktioniert</a></li>
+                                            <li class="list_item"><a href="#" class="nav_link">Über Uns</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="icon"> <a href="#" class="login_btn_icon"><i class="fas fa-sign-in-alt"></i></a>
+                                        <button class="nav_toggle"> <span class="icon_bar bar_1"></span> <span class="icon_bar bar_2"></span> <span class="icon_bar bar_3"></span> </button>
+                                    </div>
+                                </div>
+                            </nav>
+                        </header>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                       <!--  <header class="header">
+                            <nav class="navbar">
+                                <div class="top_nav">
+                                    <div class="logo"><a href="#" class="nav_logo">Youniq.Art</a></div>
+                                    <div class="nav">
+                                        <ul class="nav_item">
+                                            <li class="list_item"><a href="#" class="nav_link">Finde deinen Style</a></li>
+                                            <li class="list_item"><a href="#" class="nav_link">Wie’s funktioniert</a></li>
+                                            <li class="list_item"><a href="#" class="nav_link">Über Uns</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="icon"> <a href="#" class="login_btn_icon"><i class="fas fa-sign-in-alt"></i></a>
+                                        <button class="nav_toggle"> <span class="icon_bar bar_1"></span> <span class="icon_bar bar_2"></span> <span class="icon_bar bar_3"></span> </button>
+                                    </div>
+                                </div>
+                            </nav>
+                        </header> -->
+                        <div class="hero-section-banner-tabs">
+                            <h2>Über 100 Styles <br><span style="color:#207d2094;">Finde deinen. Und lass dir passende Kunst anfertigen.</span></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div style="clear: both;"></div>
+    <div class="container-fluid ten6">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tabs-main">
+                        <div class="site-wrapper">
+                            <section class="tabs-wrapper">
+                                <div class="tabs-container">
+                                    <div class="tabs-block">
+                                        <div class="tabs">
+                                            <input type="radio" name="tabs" id="tab1" checked="checked" />
+                                            <label for="tab1"><span class="material-icons">Alle</span></label>
+                                            <div class="tab">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="inner-tab">
+                                                            <div class="slider">
+                                                                <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide2" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide3" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide4" class="slider__nav" />
+                                                                <div style="clear:both;"></div> &nbsp; &nbsp;
+                                                                <div class="texting">
+                                                                    <h2><span>Ab CHF  &nbsp;    </span>2815</h2><a href="#">Make it youniq</a></div>
+                                                                <div class="next-prev">
+                                                                    <a class="next"><img src="images/lefticon.png"></a> <a class="prev" ><i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+                                                                <div class="slider__inner">
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/inner1.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="inner-tab">
+                                                            <div class="slider">
+                                                                <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide2" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide3" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide4" class="slider__nav" />
+                                                                <div style="clear:both;"></div> &nbsp; &nbsp;
+                                                                <div class="texting">
+                                                                    <h2><span>Ab CHF  &nbsp;    </span>2815</h2><a href="#">Make it youniq</a></div>
+                                                                <div class="next-prev">
+                                                                    <a class="next" href=""><img src="images/lefticon.png"></a> <a class="prev" href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+                                                                <div class="slider__inner">
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/tab2.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="inner-tab">
+                                                            <div class="slider">
+                                                                <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide2" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide3" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide4" class="slider__nav" />
+                                                                <div style="clear:both;"></div> &nbsp; &nbsp;
+                                                                <div class="texting">
+                                                                    <h2><span>Ab CHF  &nbsp;    </span>2815</h2><a href="#">Make it youniq</a></div>
+                                                                <div class="next-prev">
+                                                                    <a class="next" href=""><img src="images/lefticon.png"></a> <a class="prev" href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+                                                                <div class="slider__inner">
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/tab3.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="inner-tab">
+                                                            <div class="slider">
+                                                                <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide2" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide3" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide4" class="slider__nav" />
+                                                                <div style="clear:both;"></div> &nbsp; &nbsp;
+                                                                <div class="texting">
+                                                                    <h2><span>Ab CHF  &nbsp;    </span>2815</h2><a href="#">Make it youniq</a></div>
+                                                                <div class="next-prev">
+                                                                    <a class="next" href=""><img src="images/lefticon.png"></a> <a class="prev" href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+                                                                <div class="slider__inner">
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/tab4.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- second -->
+                                            <input type="radio" name="tabs" id="tab2" />
+                                            <label for="tab2"><span class="material-icons">Collage</span> </label>
+                                            <div class="tab">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="inner-tab">
+                                                            <div class="slider">
+                                                                <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide2" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide3" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide4" class="slider__nav" />
+                                                                <div style="clear:both;"></div> &nbsp; &nbsp;
+                                                                <div class="texting">
+                                                                    <h2><span>Ab CHF  &nbsp;   </span>2815</h2><a href="#">Make it youniq</a></div>
+                                                                <div class="next-prev">
+                                                                    <a class="next" href=""><img src="images/lefticon.png"></a> <a class="prev" href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+                                                                <div class="slider__inner">
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/inner1.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="inner-tab">
+                                                            <div class="slider">
+                                                                <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide2" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide3" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide4" class="slider__nav" />
+                                                                <div style="clear:both;"></div> &nbsp; &nbsp;
+                                                                <div class="texting">
+                                                                    <h2><span>Ab CHF  &nbsp;   </span>2815</h2><a href="#">Make it youniq</a></div>
+                                                                <div class="next-prev">
+                                                                    <a class="next" href=""><img src="images/lefticon.png"></a> <a class="prev" href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+                                                                <div class="slider__inner">
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/tab2.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="inner-tab">
+                                                            <div class="slider">
+                                                                <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide2" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide3" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide4" class="slider__nav" />
+                                                                <div style="clear:both;"></div> &nbsp; &nbsp;
+                                                                <div class="texting">
+                                                                    <h2><span>Ab CHF  &nbsp;   </span>2815</h2><a href="#">Make it youniq</a></div>
+                                                                <div class="next-prev">
+                                                                    <a class="next" href=""><img src="images/lefticon.png"></a> <a class="prev" href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+                                                                <div class="slider__inner">
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/tab3.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="inner-tab">
+                                                            <div class="slider">
+                                                                <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide2" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide3" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide4" class="slider__nav" />
+                                                                <div style="clear:both;"></div> &nbsp; &nbsp;
+                                                                <div class="texting">
+                                                                    <h2><span>Ab CHF  &nbsp;   </span>2815</h2><a href="#">Make it youniq</a></div>
+                                                                <div class="next-prev">
+                                                                    <a class="next" href=""><img src="images/lefticon.png"></a> <a class="prev" href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+                                                                <div class="slider__inner">
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/tab4.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <input type="radio" name="tabs" id="tab3" />
+                                            <label for="tab3"><span class="material-icons">Druck</span></label>
+                                            <div class="tab">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="inner-tab">
+                                                            <div class="slider">
+                                                                <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide2" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide3" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide4" class="slider__nav" />
+                                                                <div style="clear:both;"></div> &nbsp; &nbsp;
+                                                                <div class="texting">
+                                                                    <h2><span>Ab CHF  &nbsp;   </span>2815</h2><a href="#">Make it youniq</a></div>
+                                                                <div class="next-prev">
+                                                                    <a class="next" href=""><img src="images/lefticon.png"></a> <a class="prev" href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+                                                                <div class="slider__inner">
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/inner1.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="inner-tab">
+                                                            <div class="slider">
+                                                                <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide2" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide3" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide4" class="slider__nav" />
+                                                                <div style="clear:both;"></div> &nbsp; &nbsp;
+                                                                <div class="texting">
+                                                                    <h2><span>Ab CHF  &nbsp;   </span>2815</h2><a href="#">Make it youniq</a></div>
+                                                                <div class="next-prev">
+                                                                    <a class="next" href=""><img src="images/lefticon.png"></a> <a class="prev" href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+                                                                <div class="slider__inner">
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/tab2.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="inner-tab">
+                                                            <div class="slider">
+                                                                <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide2" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide3" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide4" class="slider__nav" />
+                                                                <div style="clear:both;"></div> &nbsp; &nbsp;
+                                                                <div class="texting">
+                                                                    <h2><span>Ab CHF  &nbsp;   </span>2815</h2><a href="#">Make it youniq</a></div>
+                                                                <div class="next-prev">
+                                                                    <a class="next" href=""><img src="images/lefticon.png"></a> <a class="prev" href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+                                                                <div class="slider__inner">
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/tab3.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="inner-tab">
+                                                            <div class="slider">
+                                                                <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide2" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide3" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide4" class="slider__nav" />
+                                                                <div style="clear:both;"></div> &nbsp; &nbsp;
+                                                                <div class="texting">
+                                                                    <h2><span>Ab CHF  &nbsp;   </span>2815</h2><a href="#">Make it youniq</a></div>
+                                                                <div class="next-prev">
+                                                                    <a class="next" href=""><img src="images/lefticon.png"></a> <a class="prev" href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+                                                                <div class="slider__inner">
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/tab4.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <input type="radio" name="tabs" id="tab4" />
+                                            <label for="tab4"><span class="material-icons">Malerei</span></label>
+                                            <div class="tab">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="inner-tab">
+                                                            <div class="slider">
+                                                                <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide2" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide3" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide4" class="slider__nav" />
+                                                                <div style="clear:both;"></div> &nbsp; &nbsp;
+                                                                <div class="texting">
+                                                                    <h2><span>Ab CHF  &nbsp;   </span>2815</h2><a href="#">Make it youniq</a></div>
+                                                                <div class="next-prev">
+                                                                    <a class="next" href=""><img src="images/lefticon.png"></a> <a class="prev" href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+                                                                <div class="slider__inner">
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/inner1.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="inner-tab">
+                                                            <div class="slider">
+                                                                <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide2" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide3" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide4" class="slider__nav" />
+                                                                <div style="clear:both;"></div> &nbsp; &nbsp;
+                                                                <div class="texting">
+                                                                    <h2><span>Ab CHF  &nbsp;   </span>2815</h2><a href="#">Make it youniq</a></div>
+                                                                <div class="next-prev">
+                                                                    <a class="next" href=""><img src="images/lefticon.png"></a> <a class="prev" href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+                                                                <div class="slider__inner">
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/tab2.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="inner-tab">
+                                                            <div class="slider">
+                                                                <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide2" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide3" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide4" class="slider__nav" />
+                                                                <div style="clear:both;"></div> &nbsp; &nbsp;
+                                                                <div class="texting">
+                                                                    <h2><span>Ab CHF  &nbsp;   </span>2815</h2><a href="#">Make it youniq</a></div>
+                                                                <div class="next-prev">
+                                                                    <a class="next" href=""><img src="images/lefticon.png"></a> <a class="prev" href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+                                                                <div class="slider__inner">
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/tab3.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="inner-tab">
+                                                            <div class="slider">
+                                                                <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide2" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide3" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide4" class="slider__nav" />
+                                                                <div style="clear:both;"></div> &nbsp; &nbsp;
+                                                                <div class="texting">
+                                                                    <h2><span>Ab CHF  &nbsp;   </span>2815</h2><a href="#">Make it youniq</a></div>
+                                                                <div class="next-prev">
+                                                                    <a class="next" href=""><img src="images/lefticon.png"></a> <a class="prev" href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+                                                                <div class="slider__inner">
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/tab4.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <input type="radio" name="tabs" id="tab5" />
+                                            <label for="tab5"><span class="material-icons">Skulptur</span></label>
+                                            <div class="tab">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="inner-tab">
+                                                            <div class="slider">
+                                                                <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide2" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide3" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide4" class="slider__nav" />
+                                                                <div style="clear:both;"></div> &nbsp; &nbsp;
+                                                                <div class="texting">
+                                                                    <h2><span>Ab CHF  &nbsp;   </span>2815</h2><a href="#">Make it youniq</a></div>
+                                                                <div class="next-prev">
+                                                                    <a class="next" href=""><img src="images/lefticon.png"></a> <a class="prev" href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+                                                                <div class="slider__inner">
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/inner1.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="inner-tab">
+                                                            <div class="slider">
+                                                                <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide2" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide3" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide4" class="slider__nav" />
+                                                                <div style="clear:both;"></div> &nbsp; &nbsp;
+                                                                <div class="texting">
+                                                                    <h2><span>Ab CHF  &nbsp;   </span>2815</h2><a href="#">Make it youniq</a></div>
+                                                                <div class="next-prev">
+                                                                    <a class="next" href=""><img src="images/lefticon.png"></a> <a class="prev" href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+                                                                <div class="slider__inner">
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/tab2.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="inner-tab">
+                                                            <div class="slider">
+                                                                <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide2" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide3" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide4" class="slider__nav" />
+                                                                <div style="clear:both;"></div> &nbsp; &nbsp;
+                                                                <div class="texting">
+                                                                    <h2><span>Ab CHF  &nbsp;   </span>2815</h2><a href="#">Make it youniq</a></div>
+                                                                <div class="next-prev">
+                                                                    <a class="next" href=""><img src="images/lefticon.png"></a> <a class="prev" href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+                                                                <div class="slider__inner">
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/tab3.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="inner-tab">
+                                                            <div class="slider">
+                                                                <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide2" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide3" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide4" class="slider__nav" />
+                                                                <div style="clear:both;"></div> &nbsp; &nbsp;
+                                                                <div class="texting">
+                                                                    <h2><span>Ab CHF  &nbsp;   </span>2815</h2><a href="#">Make it youniq</a></div>
+                                                                <div class="next-prev">
+                                                                    <a class="next" href=""><img src="images/lefticon.png"></a> <a class="prev" href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+                                                                <div class="slider__inner">
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/tab4.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <input type="radio" name="tabs" id="tab6" />
+                                            <label for="tab6"><span class="material-icons">Zeichnung</span></label>
+                                            <div class="tab">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="inner-tab">
+                                                            <div class="slider">
+                                                                <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide2" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide3" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide4" class="slider__nav" />
+                                                                <div style="clear:both;"></div> &nbsp; &nbsp;
+                                                                <div class="texting">
+                                                                    <h2><span>Ab CHF  &nbsp;   </span>2815</h2><a href="#">Make it youniq</a></div>
+                                                                <div class="next-prev">
+                                                                    <a class="next" href=""><img src="images/lefticon.png"></a> <a class="prev" href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+                                                                <div class="slider__inner">
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/inner1.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="inner-tab">
+                                                            <div class="slider">
+                                                                <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide2" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide3" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide4" class="slider__nav" />
+                                                                <div style="clear:both;"></div> &nbsp; &nbsp;
+                                                                <div class="texting">
+                                                                    <h2><span>Ab CHF  &nbsp;   </span>2815</h2><a href="#">Make it youniq</a></div>
+                                                                <div class="next-prev">
+                                                                    <a class="next" href=""><img src="images/lefticon.png"></a> <a class="prev" href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+                                                                <div class="slider__inner">
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/tab2.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="inner-tab">
+                                                            <div class="slider">
+                                                                <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide2" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide3" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide4" class="slider__nav" />
+                                                                <div style="clear:both;"></div> &nbsp; &nbsp;
+                                                                <div class="texting">
+                                                                    <h2><span>Ab CHF  &nbsp;   </span>2815</h2><a href="#">Make it youniq</a></div>
+                                                                <div class="next-prev">
+                                                                    <a class="next" href=""><img src="images/lefticon.png"></a> <a class="prev" href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+                                                                <div class="slider__inner">
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/tab3.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="inner-tab">
+                                                            <div class="slider">
+                                                                <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide2" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide3" class="slider__nav" />
+                                                                <input type="radio" name="slider" title="slide4" class="slider__nav" />
+                                                                <div style="clear:both;"></div> &nbsp; &nbsp;
+                                                                <div class="texting">
+                                                                    <h2><span>Ab CHF  &nbsp;   </span>2815</h2><a href="#">Make it youniq</a></div>
+                                                                <div class="next-prev">
+                                                                    <a class="next" href=""><img src="images/lefticon.png"></a> <a class="prev" href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a> </div>
+                                                                <div class="slider__inner">
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/tab4.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                    <div class="slider__contents">
+                                                                        <div class="innner-tabs-slider"> <img src="images/black.PNG"> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <footer> </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+    <section class="container-fluid w5">
+       
+        <section class="container">
+           
+            
+            <div class="row">
+                <div class="col-md-12">
+                   <div class="foot"> <div class="logo2">
+                       <img src="images/logo.png">
+
+
+                       
+                   </div></div>
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="number">
+                        <h1>+41 34 810 03 49
+
+                            contect@youniq.com
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="col-md-8"></div>
+
+                <div class="col-md-2">
+                    <div class="number">
+                        <h1><span class="underline"> kontakt
+                            Datenschutzerklarung
+                            Impressum
+                        </span></h1>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+  
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    /****drop_menu_bar for medium device  */
+    $(".nav_toggle").on("click", function() {
+        $('.bar_1').toggleClass('active');
+        $('.bar_2').toggleClass('active_2');
+        $('.bar_3').toggleClass('active_3');
+        $('.nav').toggleClass('nav_show')
+    });
+    /**********clickbale menubar******/
+    $('.list_item').on('click', function() {
+        $(this).find('.drop_down').toggleClass('show');
+        $(this).siblings().find('.drop_down.show').removeClass('show');
+        $(this).find('.drop_down').addClass('min_show');
+        $(this).siblings().find('.drop_down.min_show').removeClass('.min_show');
+    });
+    /*****close clickbale menu_bar on outside */
+    $(document).on('click', function(event) {
+        if($(event.target).closest('.nav').length == 0) {
+            $(this).find('.nav_item .list_item .drop_down.show').removeClass('show');
+        }
+    });
+    </script>
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>

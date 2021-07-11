@@ -1,0 +1,159 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+ul,
+ol,
+a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+/* section 1 start */
+
+.col-text-a {
+    padding: 65px 0;
+    margin: 65px 0;
+}
+
+.col-text {
+    text-align: center;
+}
+
+h1.col-heading {
+    font-size: 3.5rem;
+    color: #00ab6ccf;
+    font-weight: 700;
+}
+
+span.col-text-span {
+    color: #111;
+}
+
+
+/* section 1 end */
+
+
+/* section 2 start */
+
+.for-background {
+    background-color: whitesmoke;
+    position: relative;
+}
+
+.second-section {
+    padding-top: 80px;
+}
+
+.for-padding {
+    padding-bottom: 80px;
+}
+
+.col-img {
+    text-align: end;
+}
+
+.col-img img {
+    width: 75%;
+}
+
+h1.col-img-heading-h {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+p.col-img-heading-p {
+    font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+.col-img-heading-text {
+    line-height: 22px;
+}
+
+.for-pera-color {
+    color: #7e7e7ec9;
+}
+
+.for-background::before {
+    content: " ";
+    position: absolute;
+    width: 16.5%;
+    height: 253px;
+    background-color: #36c28e;
+    border-radius: 50%;
+    right: 173px;
+    box-shadow: 0px 0px 100px -80px;
+    top: -120px;
+}
+
+
+/* section end */
+
+
+/* section start */
+
+.for-section-3-padding {
+    padding: 100px 75px;
+}
+
+h1.col-section-3-headeing {
+    font-size: 33px !important;
+    font-weight: 700 !important;
+    color: #444 !important;
+}
+
+.section-3-inner-padding {
+    padding-bottom: 80px;
+}
+
+p.col-section-3-pera {
+    width: 85%;
+    font-weight: 600;
+}
+
+@media (max-width: 767px) {
+    .inner-heading {
+        margin-bottom: 25px;
+    }
+    .for-section-3-padding {
+        padding: 100px 12px;
+    }
+    .for-background::before {
+        width: 22.5%;
+        height: 85px;
+        right: 22px;
+        top: -41px;
+    }
+    .col-img img {
+        width: 50%;
+    }
+    .col-img {
+        text-align: start;
+    }
+   h1.col-heading {
+    font-size: 31px;
+}
+.col-text-a {
+    padding: 65px 0;
+    margin: 0px 0;
+}
+.section-3-inner-padding {
+    padding-bottom: 0;
+}
+}
