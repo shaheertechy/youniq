@@ -6,6 +6,7 @@ import Home from './containners/Home';
 import HowItWorks from './components/HowItWorks/HowItWorks';
 import ContactUs from './components/ContactUs';
 import FindYourStyle from './components/FindYouStyle/FindYourStyle';
+import ArtDetail from './components/ArtDetail/ArtDetail';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Route exact path="/how-it-works" component={HowItWorks} />
       <Route exact path="/contact-us" component={ContactUs} />
       <Route exact path="/find-your-style" component={FindYourStyle} />
+      <Route exact path="/make-your-youniq/:id" component={ArtDetail} />
       <Route exact path="/" component={Home} />
       
     </BrowserRouter>
