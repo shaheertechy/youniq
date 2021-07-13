@@ -1,12 +1,26 @@
-import React from 'react';
+import React , { useState } from 'react';
 import Footer from './common/Footer';
 import Header from './common/Header';
+import { useTranslation, withTranslation } from 'react-i18next';
 
 const ContactUs = () => {
+    const {t, i18n} = useTranslation();
+    const [currentLanguageVersion, setCurrentLanguageVersion] = useState('English Version');
+    const [lng, setLng] = useState('en');
+    const changeLanguage = (lng) => {
+      i18n.changeLanguage(lng);
+      if(lng == 'en'){
+          setCurrentLanguageVersion('Germen Version');
+          setLng('ger');
+      } else {
+        setCurrentLanguageVersion('English Version');
+        setLng('en');
+      }
+    }
     return (
         <React.Fragment>
             <section className="container-fluid w1">
-                <Header />
+                <Header changeLanguage={changeLanguage} currentLanguageVersion={currentLanguageVersion} lng={lng}  />
                 <section className="container">
                     <div className="row">
                         <div className="col-md-12">
@@ -67,7 +81,7 @@ const ContactUs = () => {
                     </div>
                 </section>
             </section>
-            <Footer />
+            <Footer t={t} />
         </React.Fragment>
     )
 }

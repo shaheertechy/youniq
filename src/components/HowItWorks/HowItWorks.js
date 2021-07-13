@@ -1,23 +1,37 @@
-import React from 'react';
+import React , { useState } from 'react';
 import Footer from '../common/Footer';
 import Header from '../common/Header';
 import HowItWorksText from './HowItWorksText';
 import Testimonials from '../../containners/Testimonials';
 import Instructions from './Instructions';
 import Portfolio from './Portfolio';
+import { useTranslation, withTranslation } from 'react-i18next';
 
 const HowItWorks = () => {
+    const {t, i18n} = useTranslation();
+    const [currentLanguageVersion, setCurrentLanguageVersion] = useState('English Version');
+    const [lng, setLng] = useState('en');
+    const changeLanguage = (lng) => {
+      i18n.changeLanguage(lng);
+      if(lng == 'en'){
+          setCurrentLanguageVersion('Germen Version');
+          setLng('ger');
+      } else {
+        setCurrentLanguageVersion('English Version');
+        setLng('en');
+      }
+    }
     return (
         <React.Fragment>
             <section className="main">
                 <div className="container-fluid">
-                    <Header />
+                    <Header changeLanguage={changeLanguage} currentLanguageVersion={currentLanguageVersion} lng={lng}/>
                     <HowItWorksText />
                 </div>
                 <Instructions />
-                <Portfolio />
+                <Portfolio /> 
             </section>
-            <Footer />
+            <Footer  t={t}/>
         </React.Fragment>
     )
 }

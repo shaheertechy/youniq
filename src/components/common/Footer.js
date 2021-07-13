@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Footer = () => {
+const Footer = (props) => {
     return (
         <React.Fragment>
               <section className="container-fluid w5">
@@ -23,9 +23,9 @@ const Footer = () => {
                         <div className="col-md-8" />
                         <div className="col-md-2">
                             <div className="number">
-                                <h1><span className="underline"> kontakt
-                                    Datenschutzerklarung
-                                    Impressum
+                                <h1><span className="underline"> {props.t("kontakt")}<br />
+                                    {props.t("Datenschutzerklarung")}<br />
+                                    {props.t("Impressum")}
                                 </span></h1>
                             </div>
                         </div>
