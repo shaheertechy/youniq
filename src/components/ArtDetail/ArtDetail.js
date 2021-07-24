@@ -1,8 +1,64 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Footer from '../common/Footer';
 import Header from '../common/Header';
+import { useTranslation, withTranslation } from 'react-i18next';
 
-const ArtDetail = () => {
+const ArtDetail = (props) => {
+
+    const [products, setProducts] = useState([]);
+    const [artImage, setArtImage] = useState(null);
+    const [artLength, setArtLength] = useState(null);
+    const [artWidth, setArtWidth] = useState(null);
+    const [mainImage, setMainImage] = useState('/img/b1.jpeg');
+    const [productPrice, setProductPrice] = useState(null);
+    useEffect(() => {
+        
+        fetch("https://stg.youniq.art/api/data/product/"+props.match.params.id)
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    setProducts(result);
+                    setArtImage(result[0].imageUrl);
+                    setArtLength(result[0].maxHeight);
+                    setArtWidth(result[0].maxWidth);
+                    setProductPrice(result[0].priceFrom);
+                },
+
+                (error) => {
+                    this.setState({
+                        isLoaded: true,
+                        error
+                    });
+                }
+            )
+
+    }, []);
+
+    const onClickImage = (imageUrl, length, width) => {
+       setArtImage(imageUrl);
+       setArtLength(length);
+       setArtWidth(width);
+    }
+
+    const onClickMainImage = (imageUrl) => {
+        setMainImage(imageUrl);
+    }
+
+    const { t, i18n } = useTranslation();
+    const [currentLanguageVersion, setCurrentLanguageVersion] = useState('English Version');
+    const [lng, setLng] = useState('en');
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+        if (lng == 'en') {
+            setCurrentLanguageVersion('Germen Version');
+            setLng('ger');
+        } else {
+            setCurrentLanguageVersion('English Version');
+            setLng('en');
+        }
+    }
+
+
     return (
         <React.Fragment>
             <section className="main">
@@ -24,13 +80,13 @@ const ArtDetail = () => {
                             <div className="col-md-12 d-flex for-display">
                                 <div className="col-md-7 for-img">
                                     <div className="simple-gallery">
-                                        <img className="maxi" src="/img/1.jpg" />
+                                        <img className="maxi" src={artImage} />
                                     </div>
-                                    <div className="mySlides">
-                                        <img src="/img/b1.jpeg" style={{ width: '100%', borderRadius: '10px' }} />
+                                    <div className="mySlides" style={{ display: 'block' }}>
+                                        <img src={mainImage} style={{ width: '100%', borderRadius: '10px' }} />
                                     </div>
-                                    <div className="mySlides">
-                                        <img src="/img/b2.jpg" style={{ width: '100%', borderRadius: '10px' }} />
+                                   {/* <div className="mySlides">
+                                         <img src="/img/b2.jpg" style={{ width: '100%', borderRadius: '10px' }} />
                                     </div>
                                     <div className="mySlides">
                                         <img src="/img/b3.jpg" style={{ width: '100%', borderRadius: '10px' }} />
@@ -43,7 +99,7 @@ const ArtDetail = () => {
                                     </div>
                                     <div className="mySlides">
                                         <img src="/img/1.jpg" style={{ width: '100%', borderRadius: '10px' }} />
-                                    </div>
+                                    </div> */}
                                 </div>
                                 <div className="col-md-5 for-inner-padding">
                                     <div className="col-5-heading">
@@ -55,18 +111,15 @@ const ArtDetail = () => {
                                     <div className="for-img-slider">
                                         <ul className="for-slider-ul">
                                             <div className="mini">
-                                                <li className="for-slider-li d-inline for-border">
-                                                    <img className="for-box-border" src="/img/1.jpg" />
-                                                </li>
-                                                <li className="for-slider-lia d-inline for-border">
-                                                    <img className="for-box-border" src="/img/2.jpg" />
-                                                </li>
-                                                <li className="for-slider-lib d-inline for-border">
-                                                    <img className="for-box-border" src="/img/3.jpg" />
-                                                </li>
-                                                <li className="for-slider-lic d-inline for-border">
-                                                    <img className="for-box-border" src="/img/4.jpg" />
-                                                </li>
+                                                {products.map((product, index) => {
+                    
+                                                    return (
+                                                        <li key={index} className="for-slider-li d-inline for-border">
+                                                            <img onClick={() => onClickImage(product.imageUrl, product.maxHeight, product.maxWidth)} className="for-box-border" src={product.imageUrl} />
+                                                        </li>
+                                                    )
+                                                })}
+
                                             </div>
                                         </ul>
                                     </div>
@@ -79,16 +132,16 @@ const ArtDetail = () => {
                                                 <a href="#"><i className="fa fa-plus imgAdd" /></a>
                                             </li>
                                             <li className="for-slider-li d-inline for-border">
-                                                <img className="demo cursor for-border-radius" src="/img/b1.jpeg" style={{ width: '19%' }} onclick="currentSlide(1)" />
+                                                <img className="demo cursor for-border-radius" src="/img/b1.jpeg" style={{ width: '19%' }} onClick={() => onClickMainImage('/img/b1.jpeg')} />
                                             </li>
                                             <li className="for-slider-lia d-inline for-border">
-                                                <img className="demo cursor for-border-radius" src="/img/b2.jpg" style={{ width: '16%' }} onclick="currentSlide(2)" />
+                                                <img className="demo cursor for-border-radius" src="/img/b2.jpg" style={{ width: '16%' }} onClick={() => onClickMainImage('/img/b2.jpg')} />
                                             </li>
                                             <li className="for-slider-lia d-inline for-border">
-                                                <img className="demo cursor for-border-radius" src="/img/b3.jpg" style={{ width: '18%' }} onclick="currentSlide(3)" />
+                                                <img className="demo cursor for-border-radius" src="/img/b3.jpg" style={{ width: '18%' }} onClick={() => onClickMainImage('/img/b3.jpg')} />
                                             </li>
                                             <li className="for-slider-li d-inline for-border">
-                                                <img className="demo cursor for-border-radius" src="/img/b4.jpg" style={{ width: '18%' }} onclick="currentSlide(4)" />
+                                                <img className="demo cursor for-border-radius" src="/img/b4.jpg" style={{ width: '18%' }} onClick={() => onClickMainImage('/img/b4.jpg')} />
                                             </li>
                                         </ul>
                                     </div>
@@ -97,11 +150,11 @@ const ArtDetail = () => {
                                     </div>
                                     <div className="for-grob-sec">
                                         <div className="col-for-3">
-                                            <p className="for-box-p">Länge <br /> <span className="for-100"> 100 </span> <span className="for-cm">cm</span></p>
+                                            <p className="for-box-p">Länge <br /> <span className="for-100"> {artLength} </span> <span className="for-cm">cm</span></p>
                                         </div>
                                         <div className="col-for-1">X</div>
                                         <div className="col-for-3">
-                                            <p className="for-box-p">Breite<br /> <span className="for-100"> 100 </span> <span className="for-cm">cm</span></p>
+                                            <p className="for-box-p">Breite<br /> <span className="for-100"> {artWidth} </span> <span className="for-cm">cm</span></p>
                                         </div>
                                     </div>
                                     <div className="col-5-heading">
@@ -110,7 +163,7 @@ const ArtDetail = () => {
                                     <div className="col-main-peers d-flex">
                                         <div className="d-flex for-col-12">
                                             <div className="col-for-peers">
-                                                <p className="for-box">2815</p>
+                                                <p className="for-box">{productPrice}</p>
                                             </div>
                                             <div className="col-for-peers">
                                                 <p className="for-boxab">CHF </p>
@@ -164,7 +217,7 @@ const ArtDetail = () => {
                     </div>
                 </div>
             </section>
-            <Footer />
+            <Footer t={t} />
         </React.Fragment>
     )
 }

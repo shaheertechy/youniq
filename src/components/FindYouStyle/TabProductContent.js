@@ -1,6 +1,7 @@
 //import { Carousel } from 'bootstrap';
 import React, { useEffect, useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel'
+import { Link } from 'react-router-dom';
 
 const TabProductContent = (props) => {
     const [categories, setCategories] = useState({});
@@ -42,14 +43,14 @@ const TabProductContent = (props) => {
                                             return (
                                                 <Carousel.Item key={index} >
 
-                                                    <img
+                                                    <Link to={'/make-your-youniq/' + product.productId}>  <img
 
                                                         src={product.image}
                                                         alt="First slide"
-                                                    />
+                                                    /></Link>
                                                     <div style={{ clear: 'both' }} /> &nbsp; &nbsp;
                                                     <div className="texting">
-                                                        <h2><span>Ab CHF  &nbsp;  </span>2815</h2><a href="#">Make it youniq</a></div>
+                                                        <h2><span>Ab CHF  &nbsp;  </span>{product.price}</h2><Link to={'/make-your-youniq/' + product.productId}>Make it youniq</Link></div>
 
                                                 </Carousel.Item>
                                             )
@@ -60,7 +61,7 @@ const TabProductContent = (props) => {
                             </div>
                         )
                     })}
-                   
+
                 </div>
             </div>
 

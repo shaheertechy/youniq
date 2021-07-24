@@ -32,7 +32,7 @@ const ProductTabs = () => {
             )
 
     }, []);
-//    https://jsfiddle.net/suhailsulu/8hnqaz2c/
+
 
     return (
         <React.Fragment>
@@ -40,11 +40,10 @@ const ProductTabs = () => {
                 id="controlled-tab-example"
                 activeKey={key}
                 onSelect={(k) => onClickOnTab(k)}
-                
             >
                 {categories.map(function (category, index) {
                     
-                    return (<Tab key={index} eventKey={category.id} title={category.name} tabClassName="material-icons" >
+                    return (<Tab eventKey={category.id} title={category.name} >
                             <TabProductContent categoryId={category.id} />
                         </Tab>)
                     ;

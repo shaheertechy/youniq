@@ -18,7 +18,8 @@ function App() {
         <Route exact path="/how-it-works" component={HowItWorks} />
         <Route exact path="/contact-us" component={ContactUs} />
         <Route exact path="/find-your-style" component={FindYourStyle} />
-        <Route exact path="/make-your-youniq/:id" component={ArtDetail} />
+        {/* <Route exact path="/make-your-youniq/:id" component={ArtDetail} /> */}
+        <Route exact path="/make-your-youniq/:id" render={(props) => <ArtDetail {...props} /> } />
         <Route exact path="/" component={Home} />
     </BrowserRouter>
   
