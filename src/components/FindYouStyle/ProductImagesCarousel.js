@@ -17,7 +17,7 @@ const ProductImagesCarousel = (props) => {
        
     }, []);
     return (
-        <Carousel slides={images} autoplay={true} interval={1000} />
+        <Carousel slides={images} autoplay={false} interval={5000} />
     )
 }
 

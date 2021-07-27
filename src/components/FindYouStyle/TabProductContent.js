@@ -38,7 +38,7 @@ const TabProductContent = (props) => {
 
                             <div key={keyIndex} className="col-md-6">
                                 <div className="inner-tab">
-                                    <Carousel indicators={true} >
+                                <Carousel indicators={true} fade={true}>
                                         {categories[keyName].map(function (product, index) {
                                             return (
                                                 <Carousel.Item key={index} >

@@ -76,6 +76,9 @@ font-display:auto;font-style:normal;font-weight:700;
     color: rgba(255,255,255,0.75);
     opacity: 1;
 }
+body {
+    overflow-x: hidden;
+}
 
 a{
     text-decoration: none;
@@ -92,6 +95,40 @@ html,body{
      font-family: "circe",sans-serif !important;
 }
 
+.carousel-control-next, .carousel-control-prev {
+    position: absolute;
+    top: 268px  !important;
+    bottom: 0;
+    z-index: 1;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 5%  !important;
+    color: #101010;
+    text-align: center;
+    opacity: .5;
+    transition: opacity .15s ease;
+    background-color: #7eb47e !important;
+    height: 9%;
+    border-radius: 50%;
+}
+.carousel-control-prev {
+    left: 10px  !important;
+}
+.carousel-control-next {
+    right: 10px !important;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    display: inline-block;
+    width: 10px !important;
+    height: 20px !important;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+}
+
 img{vertical-align: middle;}
 .img_responsive{
     position: relative;
@@ -103,7 +140,7 @@ img{vertical-align: middle;}
 }
 input.slider__nav {
     position: relative;
-    left: 45%;
+    left: 0%;
 }
 /********************************
         header style
@@ -137,7 +174,25 @@ input.slider__nav {
     text-transform: uppercase;
     letter-spacing: 1.2px;
 }
-
+.nav-tabs {
+    border-bottom: 1px solid #dee2e6;
+    background-color: #fff;
+    margin: 0 auto;
+    border-radius: 8px;
+    position: relative;
+    top: -21px;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #ffffff !Important;
+    background-color: #000 !important;
+    border-color: #dee2e6 #dee2e6 #fff;
+    border-radius: 4px 
+     !important;
+}
+.nav-tabs .nav-item {
+    color: #000;
+    margin-bottom: -1px;
+}
 .logo {
     width: 45%;
     height: 100%;
@@ -636,6 +691,7 @@ a {
 .second-section {
     display: flex;
     margin-top: 50px;
+    
 }
 .text-round p {
     color: #a7a5a5;
@@ -1075,10 +1131,69 @@ footer .credits {
 
 /*tabs inner slider*/
 .inner-tab {
-    height: 480px;
+    height: 350px;
     background-color: #fff;
-    margin-top: 65px;
-    width: 90%;
+    margin-top: 28px !important;
+    width: 77%;
+    margin: 0 auto;
+    text-align: center;
+}
+.next-prev .next, .prev:hover {
+    background-color: transparent  !important;
+}
+.inner-tab .carousel-item img {
+    width: 53%;
+    height: 200px;
+    padding-top: 28px;
+}
+.carousel-indicators .active {
+    opacity: 1;
+    top: !important;
+    margin-top: 10px;
+}
+.carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 15;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: 15%;
+    list-style: none;
+    top: 93%;
+}
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: inherit  !important;
+}
+.carousel-indicators li {
+    box-sizing: content-box;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    width: 7px  !important;
+    height: 7px !important;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #774a4a !important;
+    background-clip: padding-box;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    opacity: .5;
+    transition: opacity .6s ease;
+   }
+   .active, .demo:hover {
+    opacity: 1;
+    border: 0px solid #20c28b  !important;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
 }
 .innner-tabs-slider img {
     width: 100%;
@@ -1092,7 +1207,8 @@ footer .credits {
 }
 .texting {
     position: absolute;
-    top: 75%;
+    top: 108%;
+    left: 33%;
 }
 .texting span {
     font-size: 18px;
@@ -1134,6 +1250,13 @@ a.next img {
     text-transform: inherit;
     letter-spacing: 1.2px;
 }
+.second-section {
+    padding-top: 0px !important;
+}
+.container-fluid.ten1 {
+    background-color: #f2f2f2;
+    height: 1188px;
+}
 .hero-section-banner {
     margin-top: 34%!important;
     margin: 0 auto;
@@ -1174,7 +1297,7 @@ a.next img {
 .container-fluid.ten3 {
     position: relative;
     top: 54%;
-    height: 711px;
+    height: 323px;
 }
 .container-fluid.ten2-title {
     margin-top: 100px;
@@ -1369,7 +1492,7 @@ a.prev {
     width: 100%;
 }
 .inner-tab {
-    height: 423px;
+    height: 336px;
     background-color: #fff;
     margin-top: 65px;
     width: 100%;
@@ -1393,10 +1516,11 @@ a.prev {
 }
 .texting {
     position: absolute;
-    top: 73%;
+    top: 104%;
+    left: 109px;
 }
 input.slider__nav {
     position: relative;
-    left: 30%;
+    left: 0%;
 }
 }

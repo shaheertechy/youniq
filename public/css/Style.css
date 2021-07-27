@@ -132,7 +132,7 @@ p.col-section-3-pera {
         margin-bottom: 25px;
     }
     .for-section-3-padding {
-        padding: 100px 12px;
+        padding: 54px 12px;
     }
     .for-background::before {
         width: 22.5%;
@@ -141,7 +141,7 @@ p.col-section-3-pera {
         top: -41px;
     }
     .col-img img {
-        width: 50%;
+        width: 30%;
     }
     .col-img {
         text-align: start;
@@ -155,5 +155,25 @@ p.col-section-3-pera {
 }
 .section-3-inner-padding {
     padding-bottom: 0;
+}
+p.col-img-heading-p {
+    font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-size: 14px;
+    width: 100%;
+    line-height: 28px;
+}
+h1.col-heading {
+    font-size: 24px;
+    line-height: 34px;
+}
+.col-img-heading-text {
+    line-height: 22px;
+    padding: 10px;
+}
+p.col-section-3-pera {
+    width: 100%;
+    font-weight: 600;
 }
 }
