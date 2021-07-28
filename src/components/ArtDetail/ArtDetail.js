@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import Footer from '../common/Footer';
 import Header from '../common/Header';
 import { useTranslation, withTranslation } from 'react-i18next';
-import Draggable, {DraggableCore} from 'react-draggable'; // Both at the same time
+import Draggable, { DraggableCore } from 'react-draggable'; // Both at the same time
+import { Link } from 'react-router-dom';
+import Loader from '../Loader';
 
 const ArtDetail = (props) => {
 
@@ -14,9 +16,10 @@ const ArtDetail = (props) => {
     const [productPrice, setProductPrice] = useState(null);
     const [priceFactor, setPriceFactor] = useState(0);
     const [productDetail, setProductDetail] = useState({});
+    const [isLoader, setIsLoader] = useState(true);
     useEffect(() => {
-        
-        fetch("https://stg.youniq.art/api/data/product/"+props.match.params.id)
+
+        fetch("https://stg.youniq.art/api/data/product/" + props.match.params.id)
             .then(res => res.json())
             .then(
                 (result) => {
@@ -31,23 +34,24 @@ const ArtDetail = (props) => {
                     var finalPrice = parseInt(heightWidt) * parseInt(result[0].priceFactor);
                     setProductPrice(finalPrice);
                     setProductDetail(result[0]);
+                    setIsLoader(false);
                 },
 
                 (error) => {
-                    this.setState({
-                        isLoaded: true,
-                        error
-                    });
+                    // this.setState({
+                    //     isLoaded: true,
+                    //     error
+                    // });
                 }
             )
 
     }, []);
 
     const onClickImage = (imageUrl, length, width, product) => {
-       setArtImage(imageUrl);
-       setArtLength(length);
-       setArtWidth(width);
-       setProductDetail(product)
+        setArtImage(imageUrl);
+        setArtLength(length);
+        setArtWidth(width);
+        setProductDetail(product)
     }
 
     const onChangeLenght = (event) => {
@@ -110,26 +114,12 @@ const ArtDetail = (props) => {
                             <div className="col-md-12 d-flex for-display">
                                 <div className="col-md-7 for-img-74">
                                     <div className="simple-gallery">
-                                        <img className="maxi" src={artImage}  height={artLength} width={artWidth} />
+                                        <img className="maxi" src={artImage} height={artLength} width={artWidth} />
                                     </div>
                                     <div className="mySlides" style={{ display: 'block' }}>
                                         <img src={mainImage} style={{ width: '100%', borderRadius: '10px' }} />
                                     </div>
-                                   {/* <div className="mySlides">
-                                         <img src="/img/b2.jpg" style={{ width: '100%', borderRadius: '10px' }} />
-                                    </div>
-                                    <div className="mySlides">
-                                        <img src="/img/b3.jpg" style={{ width: '100%', borderRadius: '10px' }} />
-                                    </div>
-                                    <div className="mySlides">
-                                        <img src="/img/b4.jpg" style={{ width: '100%', borderRadius: '10px' }} />
-                                    </div>
-                                    <div className="mySlides">
-                                        <img src="/img/5.jpg" style={{ width: '100%', borderRadius: '10px' }} />
-                                    </div>
-                                    <div className="mySlides">
-                                        <img src="/img/1.jpg" style={{ width: '100%', borderRadius: '10px' }} />
-                                    </div> */}
+
                                 </div>
                                 <div className="col-md-5 for-inner-padding">
                                     <div className="col-5-heading">
@@ -141,8 +131,8 @@ const ArtDetail = (props) => {
                                     <div className="for-img-slider">
                                         <ul className="for-slider-ul">
                                             <div className="mini">
-                                                {products.map((product, index) => {
-                    
+                                                {isLoader ? <Loader /> : products.map((product, index) => {
+
                                                     return (
                                                         <li key={index} className="for-slider-li d-inline for-border">
                                                             <img onClick={() => onClickImage(product.imageUrl, product.maxHeight, product.maxWidth, product)} className="for-box-border" src={product.imageUrl} />
@@ -178,36 +168,50 @@ const ArtDetail = (props) => {
                                     <div className="col-5-heading">
                                         <h6 className="heading-h6">Größe</h6>
                                     </div>
-                                    <div className="for-grob-sec">
-                                        <div className="col-for-3">
-                                            <p className="for-box-p">Länge <br /> 
-                                            {/* <span className="for-100"> {artLength} </span>  */}
-                                            <input type="number" value={artLength} style={{width: '50%'}} name="length" onChange={onChangeLenght} className="for-100" />
-                                            
-                                            <span className="for-cm">cm</span></p>
+                                    {isLoader ? <Loader /> : <React.Fragment>
+                                        <div className="for-grob-sec">
+                                            <div className="col-for-3">
+                                                <p className="for-box-p">Länge <br />
+                                                    {/* <span className="for-100"> {artLength} </span>  */}
+                                                    <input type="number" value={artLength} style={{ width: '50%' }} name="length" onChange={onChangeLenght} className="for-100" />
+
+                                                    <span className="for-cm">cm</span></p>
+                                            </div>
+                                            <div className="col-for-1">X</div>
+                                            <div className="col-for-3">
+                                                <p className="for-box-p">Breite<br />
+                                                    {/* <span className="for-100"> {artWidth} </span> */}
+                                                    <input type="number" value={artWidth} style={{ width: '50%' }} name="width" onChange={onChangeWidth} className="for-100" />
+                                                    <span className="for-cm">cm</span></p>
+                                            </div>
                                         </div>
-                                        <div className="col-for-1">X</div>
-                                        <div className="col-for-3">
-                                            <p className="for-box-p">Breite<br /> 
-                                            {/* <span className="for-100"> {artWidth} </span> */}
-                                            <input type="number" value={artWidth}  style={{width: '50%'}} name="width" onChange={onChangeWidth} className="for-100" />
-                                             <span className="for-cm">cm</span></p>
-                                        </div>
-                                    </div>
+                                    </React.Fragment>}
+
                                     <div className="col-5-heading">
                                         <h6 className="heading-h6">Preis</h6>
                                     </div>
                                     <div className="col-main-peers d-flex">
-                                        <div className="d-flex for-col-12">
-                                            <div className="col-for-peers">
-                                                <p className="for-box">{productPrice}</p>
+                                        {isLoader ? <Loader /> : <React.Fragment>
+                                            <div className="d-flex for-col-12">
+                                                <div className="col-for-peers">
+                                                    <p className="for-box">{productPrice}</p>
+                                                </div>
+                                                <div className="col-for-peers">
+                                                    <p className="for-boxab">CHF </p>
+                                                </div>
                                             </div>
-                                            <div className="col-for-peers">
-                                                <p className="for-boxab">CHF </p>
-                                            </div>
-                                        </div>
+                                        </React.Fragment>}
+
                                         <div className="for-button">
-                                            <button type="button" className="btn"> <a href="#"> Weiter zur Anfrage </a></button>
+                                            <button type="button" className="btn"> <Link to={{
+                                                pathname: "/make-your-youniq-2/" + props.match.params.id,
+                                                state: {
+                                                    artImage: artImage,
+                                                    artLength: artLength,
+                                                    artWidth: artWidth,
+                                                    productPrice: productPrice
+                                                },
+                                            }}> Weiter zur Anfrage </Link></button>
                                         </div>
                                     </div>
                                 </div>

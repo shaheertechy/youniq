@@ -2,9 +2,12 @@
 import React, { useEffect, useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel'
 import { Link } from 'react-router-dom';
+import Loader from '../Loader';
 
 const TabProductContent = (props) => {
     const [categories, setCategories] = useState({});
+
+    const [isLoader, setIsLoader] = useState(true);
 
     const handleOnclickCategory = async (id) => {
         fetch("https://stg.youniq.art/api/data/product/list?categoryId=" + id)
@@ -13,6 +16,7 @@ const TabProductContent = (props) => {
                 (result) => {
                     console.log(result);
                     setCategories(result);
+                    setIsLoader(false);
                     // setProducts(result);
                 },
 
@@ -33,7 +37,7 @@ const TabProductContent = (props) => {
         <React.Fragment>
             <div className="tab">
                 <div className="row">
-                    {Object.keys(categories).map(function (keyName, keyIndex) {
+                    {isLoader ? <Loader /> : Object.keys(categories).map(function (keyName, keyIndex) {
                         return (
 
                             <div key={keyIndex} className="col-md-6">
