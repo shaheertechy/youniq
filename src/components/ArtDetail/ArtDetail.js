@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Footer from '../common/Footer';
 import Header from '../common/Header';
 import { useTranslation, withTranslation } from 'react-i18next';
+import Draggable, {DraggableCore} from 'react-draggable'; // Both at the same time
 
 const ArtDetail = (props) => {
 
@@ -11,6 +12,8 @@ const ArtDetail = (props) => {
     const [artWidth, setArtWidth] = useState(null);
     const [mainImage, setMainImage] = useState('/img/b1.jpeg');
     const [productPrice, setProductPrice] = useState(null);
+    const [priceFactor, setPriceFactor] = useState(0);
+    const [productDetail, setProductDetail] = useState({});
     useEffect(() => {
         
         fetch("https://stg.youniq.art/api/data/product/"+props.match.params.id)
@@ -22,6 +25,12 @@ const ArtDetail = (props) => {
                     setArtLength(result[0].maxHeight);
                     setArtWidth(result[0].maxWidth);
                     setProductPrice(result[0].priceFrom);
+                    setPriceFactor(result[0].priceFactor);
+
+                    var heightWidt = parseInt(result[0].maxHeight) + parseInt(result[0].maxWidth);
+                    var finalPrice = parseInt(heightWidt) * parseInt(result[0].priceFactor);
+                    setProductPrice(finalPrice);
+                    setProductDetail(result[0]);
                 },
 
                 (error) => {
@@ -34,10 +43,31 @@ const ArtDetail = (props) => {
 
     }, []);
 
-    const onClickImage = (imageUrl, length, width) => {
+    const onClickImage = (imageUrl, length, width, product) => {
        setArtImage(imageUrl);
        setArtLength(length);
        setArtWidth(width);
+       setProductDetail(product)
+    }
+
+    const onChangeLenght = (event) => {
+
+        setArtLength(event.target.value);
+
+        var heightWidt = parseInt(event.target.value) + parseInt(artWidth);
+        console.log(heightWidt, priceFactor);
+        var finalPrice = parseInt(heightWidt) * parseInt(priceFactor);
+        setProductPrice(finalPrice);
+        //alert(event.target.value);
+    }
+
+    const onChangeWidth = (event) => {
+        //alert(event.target.value);
+        setArtWidth(event.target.value);
+
+        var heightWidt = parseInt(event.target.value) + parseInt(artLength);
+        var finalPrice = parseInt(heightWidt) * parseInt(priceFactor);
+        setProductPrice(finalPrice);
     }
 
     const onClickMainImage = (imageUrl) => {
@@ -68,7 +98,7 @@ const ArtDetail = (props) => {
                         <div class="row ">
                             <div class="col-md-12 for-first-heading-speacing">
                                 <div class="for-first-heading">
-                                    <h1>Make it Youniq</h1>
+                                    <h1>Make it Youniq {artLength}</h1>
                                 </div>
                             </div>
                         </div>
@@ -78,9 +108,9 @@ const ArtDetail = (props) => {
                     <div className="container for-padding">
                         <div className="row">
                             <div className="col-md-12 d-flex for-display">
-                                <div className="col-md-7 for-img">
+                                <div className="col-md-7 for-img-74">
                                     <div className="simple-gallery">
-                                        <img className="maxi" src={artImage} />
+                                        <img className="maxi" src={artImage}  height={artLength} width={artWidth} />
                                     </div>
                                     <div className="mySlides" style={{ display: 'block' }}>
                                         <img src={mainImage} style={{ width: '100%', borderRadius: '10px' }} />
@@ -115,7 +145,7 @@ const ArtDetail = (props) => {
                     
                                                     return (
                                                         <li key={index} className="for-slider-li d-inline for-border">
-                                                            <img onClick={() => onClickImage(product.imageUrl, product.maxHeight, product.maxWidth)} className="for-box-border" src={product.imageUrl} />
+                                                            <img onClick={() => onClickImage(product.imageUrl, product.maxHeight, product.maxWidth, product)} className="for-box-border" src={product.imageUrl} />
                                                         </li>
                                                     )
                                                 })}
@@ -150,11 +180,18 @@ const ArtDetail = (props) => {
                                     </div>
                                     <div className="for-grob-sec">
                                         <div className="col-for-3">
-                                            <p className="for-box-p">Länge <br /> <span className="for-100"> {artLength} </span> <span className="for-cm">cm</span></p>
+                                            <p className="for-box-p">Länge <br /> 
+                                            {/* <span className="for-100"> {artLength} </span>  */}
+                                            <input type="number" value={artLength} style={{width: '50%'}} name="length" onChange={onChangeLenght} className="for-100" />
+                                            
+                                            <span className="for-cm">cm</span></p>
                                         </div>
                                         <div className="col-for-1">X</div>
                                         <div className="col-for-3">
-                                            <p className="for-box-p">Breite<br /> <span className="for-100"> {artWidth} </span> <span className="for-cm">cm</span></p>
+                                            <p className="for-box-p">Breite<br /> 
+                                            {/* <span className="for-100"> {artWidth} </span> */}
+                                            <input type="number" value={artWidth}  style={{width: '50%'}} name="width" onChange={onChangeWidth} className="for-100" />
+                                             <span className="for-cm">cm</span></p>
                                         </div>
                                     </div>
                                     <div className="col-5-heading">
@@ -192,7 +229,7 @@ const ArtDetail = (props) => {
                             <div className="col-md-3">
                                 <div className="for-last-heading">
                                     <h6>Technik</h6>
-                                    <p>Acryl und Häkelgarn auf Leinwand</p>
+                                    <p>{productDetail.technik}</p>
                                 </div>
                             </div>
                             <div className="col-md-3">
@@ -204,7 +241,7 @@ const ArtDetail = (props) => {
                             <div className="col-md-3">
                                 <div className="for-last-heading">
                                     <h6>Auftragsform</h6>
-                                    <p>Fotografische Vorlage, Freier Auftrag</p>
+                                    <p>{productDetail.aufstragsform} </p>
                                 </div>
                             </div>
                             <div className="col-md-3">

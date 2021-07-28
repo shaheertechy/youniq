@@ -162,6 +162,7 @@ span.for-100 {
     font-weight: 700;
 }
 
+
 span.for-cm {
     padding-left: 20px;
     font-size: 16px;
@@ -346,7 +347,7 @@ img {
     border: 6px solid #444;
     background-color: #f3f3f3eb;
     padding: 8px;
-    width: 24%;
+    /* width: 24%; */
     position: absolute;
     background-size: 100% 100%;
     top: 60px;

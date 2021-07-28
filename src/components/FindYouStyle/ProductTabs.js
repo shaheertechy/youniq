@@ -2,10 +2,12 @@ import { Carousel } from 'bootstrap';
 import React, { useEffect, useState } from 'react';
 import { Col, Nav, Row, Tabs, Tab } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import Loader from '../Loader';
 import TabProductContent from './TabProductContent';
 
 const ProductTabs = () => {
     const [categories, setCategories] = useState([]);
+    const [isLoader, setIsLoader] = useState(true);
     const [key, setKey] = useState(1);
  
     const [products, setProducts] = useState({});
@@ -21,6 +23,7 @@ const ProductTabs = () => {
             .then(
                 (result) => {
                     setCategories(result);
+                    setIsLoader(false);
                 },
 
                 (error) => {
@@ -36,7 +39,7 @@ const ProductTabs = () => {
 
     return (
         <React.Fragment>
-            <Tabs
+           {isLoader ? <Loader /> : <Tabs
                 id="controlled-tab-example"
                 activeKey={key}
                 onSelect={(k) => onClickOnTab(k)}
@@ -50,7 +53,7 @@ const ProductTabs = () => {
                 })}
 
             
-            </Tabs>
+            </Tabs>} 
             {/* <Tab.Container id="left-tabs-example" defaultActiveKey="first">
                 <Row>
                     <Col sm={3}>
