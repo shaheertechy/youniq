@@ -28,7 +28,13 @@ section.main {
 .for-first-heading-speacing {
     margin: 100px 0;
 }
-
+.simple-gallery img {
+    height: 55%;
+}
+.mySlides img {
+    width: 100% !important;
+    margin-left: 22px;
+}
 .for-first-heading h1 {
     font-size: 50px;
     font-weight: 800;
@@ -395,7 +401,29 @@ img {
         padding: 3px 9px;
         line-height: 25px;
     }
-    
+    .simple-gallery img {
+        border: 6px solid #444;
+        background-color: #f3f3f3eb;
+        padding: 8px;
+        /* width: 24%; */
+        position: absolute;
+        background-size: 100% 100%;
+        top: 42px;
+        left: 14%;
+        box-shadow: -6px 5px 15px -11px;
+    }
+    .d-flex {
+        display: -ms-flexbox!important;
+        left: -2px  !important;
+    }
+    .mySlides img {
+        width: 100% !important;
+        margin-left: 0px;
+    }
+    .simple-gallery img {
+        height: 153px;
+        width: 69%;
+    }
     .col-md-12.d-flex.for-display {
         display: block !important;
     }
