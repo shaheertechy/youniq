@@ -65,13 +65,13 @@ const ContactUs = () => {
                 <section className="container">
                     <div className="row">
                         <div className="col-md-12">
-                            <div className="form">
+                            <div className="form trouble">
                                 <h1>kontaktangaben</h1>
                                 <form onSubmit={handleSubmit(onSubmit)}>
 
                                     <div className="inner-form">
                                         <input className="form1"
-                                            placeholder="Name"
+                                            placeholder="Vorname"
                                             {...register("name", {
                                                 required: true,
                                                 maxLength: 20,
@@ -89,6 +89,7 @@ const ContactUs = () => {
                                         <input
                                             id="email"
                                             className="form1"
+                                            placeholder="Nachname"
                                             {...register("email", {
                                                 required: "required",
                                                 pattern: {
@@ -103,6 +104,7 @@ const ContactUs = () => {
                                         <input
                                             id="phone"
                                             className="form1"
+                                            placeholder="E-Mail"
                                             {...register("phone", {
                                                 required: "required",
                                                 minLength: 6, maxLength: 12
@@ -114,6 +116,7 @@ const ContactUs = () => {
                                         <input
                                             id="comments"
                                             className="form1"
+                                            placeholder="Telefonummer"
                                             {...register("comments", {
                                                 required: "required",
                                             })}
@@ -129,7 +132,7 @@ const ContactUs = () => {
                                         <br />
                                         <input type="checkbox" id="vehicle1" name="vehicle1" defaultValue="Bike" className="cbox" />
                                         <label htmlFor="vehicle1">lch akzeptiere die <span className="agb">AGBs</span></label><br /> */}
-                                        <div className="ankr"><input type={'submit'} /></div>
+                                        <div className="ankr"><input type={'submit'} value="Anfrage abschicken" /></div>
                                     </div>
                                 </form>
                             </div>
@@ -137,7 +140,7 @@ const ContactUs = () => {
                     </div>
                 </section>
             </section>
-            <section className="container-fluid theory3">
+            <section className="container-fluid theory3 contain-trouble">
                 <section className="container">
                     <div className="row">
                         <div className="col-md-12">

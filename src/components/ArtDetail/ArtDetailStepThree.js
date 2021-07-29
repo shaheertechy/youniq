@@ -89,7 +89,7 @@ const ArtDetailStepThree = (props) => {
 
                                     <div className="inner-form">
                                         <input className="form1"
-                                            placeholder="Name"
+                                            placeholder="Vorname"
                                             {...register("name", {
                                                 required: true,
                                                 maxLength: 20,
@@ -105,7 +105,7 @@ const ArtDetailStepThree = (props) => {
                                         )}
 
                                         <input className="form1"
-                                            placeholder="Surname"
+                                            placeholder="Nach name"
                                             {...register("surname", {
                                                 required: true,
                                                 maxLength: 20,
@@ -122,7 +122,7 @@ const ArtDetailStepThree = (props) => {
 
                                         <input
                                             id="email"
-                                            placeholder="Surname"
+                                            placeholder="E-Mail"
                                             className="form1"
                                             {...register("email", {
                                                 required: "required",
