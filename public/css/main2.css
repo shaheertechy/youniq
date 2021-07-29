@@ -1,5 +1,8 @@
 *{margin: 0 auto;}
 
+::placeholder{
+    color: #000;
+}
 
 .theory h1 {
     text-align: center;
@@ -62,12 +65,13 @@ ul{
 
 .form {
     width: 50%;
-    height: 1100px;
+    height: 1170px;
     border: 1px solid #f5f5f5;
     border-radius: 5px;
     position: absolute;
     background-color: #fff;
     z-index: 1;
+    padding-bottom: 50px;
     left: 25%;
 }
 .inner-form{
@@ -126,8 +130,10 @@ span.i {
 .textmrg2 h1 {
     font-size: 15px;
     font-weight: 700;
-    padding: 3px 0px 0px 21px;
+    padding: 0px 0px 0px 0px;
     color: #808080ad;
+    margin-top: 0px;
+    margin: 6px 0px 8px 25px;
 }
 
 .textmrg2 h4 {
@@ -419,7 +425,7 @@ div.number h1 {
 }
 .form {
     width: 86%;
-    height: 1280px;
+    height: 1190px;
     border: 1px solid #f5f5f5;
     border-radius: 5px;
     position: absolute;
@@ -430,7 +436,7 @@ div.number h1 {
 .theory3 {
     width: 100%;
     background-color: #f5f5f5;
-    /* height: 1230px; */
+    height: 1120px;
     margin-bottom: 100px;
 }
 .inner-form {
