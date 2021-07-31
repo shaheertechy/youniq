@@ -3,10 +3,10 @@ import Footer from '../common/Footer';
 import Header from '../common/Header';
 import { useTranslation, withTranslation } from 'react-i18next';
 import Draggable, { DraggableCore } from 'react-draggable'; // Both at the same time
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 const ArtDetailStepTwo = (props) => {
-
+    const history = useHistory();
     const [products, setProducts] = useState([]);
     const [artImage, setArtImage] = useState(null);
     const [artLength, setArtLength] = useState(null);
@@ -19,6 +19,8 @@ const ArtDetailStepTwo = (props) => {
     const [useCustomImage, setUseCustomImage] = useState(false);
     const [wouldLikeToBeSurprised, setWouldLikeToBeSurprised] = useState(false);
     const [comments, setComments] = useState("");
+    const [frameType, setFrameType] = useState("frame1");
+ //   const [useCustomImage, setUseCustomImage] = useState(false);
     useEffect(() => {
         // console.log("===========");
         // console.log(productData);
@@ -128,6 +130,7 @@ const ArtDetailStepTwo = (props) => {
             .then(result => {
                 console.log(result);
                 setCustomImage(result);
+                setUseCustomImage(true);
                 // file["base64"] = result;
                 // console.log("File Is", file);
                 // setCustomImage(result)
@@ -151,6 +154,7 @@ const ArtDetailStepTwo = (props) => {
     }
 
     const { t, i18n } = useTranslation();
+    console.log(i18n);
     const [currentLanguageVersion, setCurrentLanguageVersion] = useState('English Version');
     const [lng, setLng] = useState('en');
     const changeLanguage = (lng) => {
@@ -169,7 +173,7 @@ const ArtDetailStepTwo = (props) => {
     return (
         <React.Fragment>
             <section className="container-fluid w1">
-                <Header />
+                <Header changeLanguage={changeLanguage} currentLanguageVersion={currentLanguageVersion} lng={lng} />
                 <section className="container">
                     <div className="row">
                         <div className="col-md-12">
@@ -188,7 +192,7 @@ const ArtDetailStepTwo = (props) => {
                         <div className="col-md-9">
                             <div className="arrow">
                                 <i className="fas fa-angle-left" />
-                                <h1>Zurück</h1>
+                                <h1 onClick={() => history.goBack()}>Zurück {i18n.language}</h1>
                             </div>
                             <div className="theory2">
                             </div>
@@ -239,12 +243,12 @@ const ArtDetailStepTwo = (props) => {
                                         <div className="textmrg2">
                                             <div className="lange">
                                                 <h1>Länge</h1>
-                                                <h3>{productData.artLength}  <span className="i">〡</span>  cm</h3>
+                                                <h3>{productData.height}  <span className="i">〡</span>  cm</h3>
                                             </div>
                                             <h4>x</h4>
                                             <div className="lange">
                                                 <h1>Breite</h1>
-                                                <h3>{productData.artWidth}  <span className="i">〡</span>  cm</h3>
+                                                <h3>{productData.width}  <span className="i">〡</span>  cm</h3>
                                             </div>
                                         </div>
                                     </div>
@@ -313,13 +317,13 @@ const ArtDetailStepTwo = (props) => {
                                     <div className="col-md-6">
                                         <div className="textmrg4">
                                             <div className="box1">
-                                                <div className="lbox1" />
+                                                <div onClick={() => setFrameType('frame1')} className="lbox1" />
                                             </div>
                                             <div className="box1">
-                                                <div className="lbox1" />
+                                                <div onClick={() => setFrameType('frame2')} className="lbox1" />
                                             </div>
                                             <div className="box1">
-                                                <div className="lbox2" />
+                                                <div onClick={() => setFrameType('frame3')} className="lbox2" />
                                             </div>
                                         </div>
                                     </div>
@@ -348,7 +352,8 @@ const ArtDetailStepTwo = (props) => {
                                                   comments: comments,
                                                   wouldLikeToBeSurprised: wouldLikeToBeSurprised,
                                                   useCustomImage: useCustomImage,
-                                                  customImage: customImage
+                                                  customImage: customImage,
+                                                  frameType: frameType
                                                  },
                                             }}> Weiter </Link>
                                                 {/* <a href="#"></a> */}

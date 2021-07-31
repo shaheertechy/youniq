@@ -29,7 +29,7 @@ const FindYourStyle = (props) => {
                             <div className="col-md-12">
                               
                                 <div className="hero-section-banner-tabs">
-                                    <h2>Über 100 Styles <br /><span style={{ color: '#207d2094' }}>Finde deinen. Und lass dir passende Kunst anfertigen.</span></h2>
+                                    <h2>{t('Über 100 Styles')} <br /><span style={{ color: '#207d2094' }}>{t('Finde deinen. Und lass dir passende Kunst anfertigen.')}</span></h2>
                                 </div>
                             </div>
                         </div>

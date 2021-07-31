@@ -3,9 +3,10 @@ import Footer from '../common/Footer';
 import Header from '../common/Header';
 import { useTranslation, withTranslation } from 'react-i18next';
 import { useForm } from "react-hook-form";
+import { useHistory } from 'react-router-dom';
 
 const ArtDetailStepThree = (props) => {
-
+    const history = useHistory();
     const {
         register,
         handleSubmit,
@@ -29,18 +30,63 @@ const ArtDetailStepThree = (props) => {
 
     const onSubmit = (data) => {
         // alert(JSON.stringify(data));
-        var order = {...data, ...props.location.state};
+
+        // delete data['address1'];
+        // delete data['address2'];
+        // delete data['productId'];
+        // delete data['artImage'];
+        // delete data['artImage'];
+        // data.address = 'abcds';
+        // data.frameType = 'frame1';
+     
+         var order = {...data, ...props.location.state};
+         console.log("Order", order);
         const requestOptions = {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(order)
+            headers: {
+                'Content-Type': '*/*',
+                'Accept': 'application/json'                                                    
+            },
+            body: JSON.stringify({
+                "acceptedAgbs":true,
+                "address": order.address1+ ' '+ order.address2,
+                "comments": order.comments,
+                "country":order.country,
+                "email":order.email,
+                "frameType":order.frameType,
+                "height":order.height,
+                "name":order.name,
+                "phone":order.phone,
+                "postalCode":"08000",
+               // "customImage": order.customImage,
+                "productId":order.productId,
+                "surname":order.surname,
+                "useCustomImage":order.useCustomImage,
+                "width":order.height,
+                "wouldLikeToBeSurprised":order.wouldLikeToBeSurprised
+              })
         };
 
         alert(JSON.stringify(requestOptions));
         fetch('https://stg.youniq.art/api/action/order', requestOptions)
-            .then(response => response.json())
+            .then(response => {
+                alert(response.status);
+                if (response.status == 200) {   // *** This can be just `if (response.ok) {`
+                    console.log(response);      // *** This is premature
+                    return response.json();
+                }
+                else
+                {
+                    throw `error with status ${response.status}`;
+                }
+                console.log(response.json());
+            })
             .then(data => {
-                alert("herer");
+                console.log(data);
+            })
+            .catch(error => {
+                alert(error)
+                console.log(error);
             });
     }; // your form submit function which will invoke after successful validation
 
@@ -71,7 +117,7 @@ const ArtDetailStepThree = (props) => {
                         <div className="col-md-9">
                             <div className="arrow">
                                 <i className="fas fa-angle-left" />
-                                <h1>Zurück</h1>
+                                <h1 onClick={() => history.goBack()}>Zurück</h1>
                             </div>
                             <div className="theory2">
                             </div>
@@ -149,6 +195,7 @@ const ArtDetailStepThree = (props) => {
 
                                         <input
                                             id="address1"
+                                            placeholder="Strasse / Hausnummer"
                                             className="form1"
                                             {...register("address1", {
                                                 required: "required",
@@ -158,6 +205,7 @@ const ArtDetailStepThree = (props) => {
                                         {errors.address1 && <p className="alert alert-danger">{errors.address1.message}</p>}
                                         <input
                                             id="address2"
+                                            placeholder="PLZ / Stadt"
                                             className="form1"
                                             {...register("address2", {
                                                 required: "required",
@@ -168,6 +216,7 @@ const ArtDetailStepThree = (props) => {
 
                                         <input
                                             id="country"
+                                            placeholder="Country"
                                             className="form1"
                                             {...register("country", {
                                                 required: "required",
