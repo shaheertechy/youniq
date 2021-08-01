@@ -102,7 +102,7 @@ const ArtDetail = (props) => {
                         <div class="row ">
                             <div class="col-md-12 for-first-heading-speacing">
                                 <div class="for-first-heading">
-                                    <h1>Make it Youniq</h1>
+                                    <h1>{t('Make it Youniq')}</h1>
                                 </div>
                             </div>
                         </div>
@@ -123,10 +123,9 @@ const ArtDetail = (props) => {
                                 </div>
                                 <div className="col-md-5 for-inner-padding">
                                     <div className="col-5-heading">
-                                        <h1 className="heading-h1">Stelle deinen Style zusammen</h1>
-                                        <p className="pera-p">Wähle den Style, der dir am besten gefällt. Teste aus, wie er in der
-                                            Umgebung aussieht.</p>
-                                        <h6 className="heading-h6">Style-Beispiele</h6>
+                                        <h1 className="heading-h1">{t('Stelle deinen Style zusammen')}</h1>
+                                        <p className="pera-p">{t('Wähle den Style, der dir am besten gefällt. Teste aus, wie er in der Umgebung aussieht.')}</p>
+                                        <h6 className="heading-h6">{t('Style-Beispiele')}</h6>
                                     </div>
                                     <div className="for-img-slider">
                                         <ul className="for-slider-ul">
@@ -144,7 +143,7 @@ const ArtDetail = (props) => {
                                         </ul>
                                     </div>
                                     <div className="col-5-heading">
-                                        <h6 className="heading-h6">Umgebung</h6>
+                                        <h6 className="heading-h6">{t('Umgebung')}</h6>
                                     </div>
                                     <div className="for-img-slider">
                                         <ul className="for-slider-ul">
@@ -166,12 +165,12 @@ const ArtDetail = (props) => {
                                         </ul>
                                     </div>
                                     <div className="col-5-heading">
-                                        <h6 className="heading-h6">Größe</h6>
+                                        <h6 className="heading-h6">{t('Größe')}</h6>
                                     </div>
                                     {isLoader ? <Loader /> : <React.Fragment>
                                         <div className="for-grob-sec">
                                             <div className="col-for-3">
-                                                <p className="for-box-p">Länge <br />
+                                                <p className="for-box-p">{t('Länge')} <br />
                                                     {/* <span className="for-100"> {artLength} </span>  */}
                                                     <input type="number" value={artLength} style={{ width: '50%' }} name="length" onChange={onChangeLenght} className="for-100" />
 
@@ -179,7 +178,7 @@ const ArtDetail = (props) => {
                                             </div>
                                             <div className="col-for-1">X</div>
                                             <div className="col-for-3">
-                                                <p className="for-box-p">Breite<br />
+                                                <p className="for-box-p">{t('Breite')}<br />
                                                     {/* <span className="for-100"> {artWidth} </span> */}
                                                     <input type="number" value={artWidth} style={{ width: '50%' }} name="width" onChange={onChangeWidth} className="for-100" />
                                                     <span className="for-cm">cm</span></p>
@@ -188,7 +187,7 @@ const ArtDetail = (props) => {
                                     </React.Fragment>}
 
                                     <div className="col-5-heading">
-                                        <h6 className="heading-h6">Preis</h6>
+                                        <h6 className="heading-h6">{t('Preis')}</h6>
                                     </div>
                                     <div className="col-main-peers d-flex">
                                         {isLoader ? <Loader /> : <React.Fragment>
@@ -197,7 +196,7 @@ const ArtDetail = (props) => {
                                                     <p className="for-box">{productPrice}</p>
                                                 </div>
                                                 <div className="col-for-peers">
-                                                    <p className="for-boxab">CHF </p>
+                                                    <p className="for-boxab">{t('CHF')} </p>
                                                 </div>
                                             </div>
                                         </React.Fragment>}
@@ -212,7 +211,7 @@ const ArtDetail = (props) => {
                                                     productPrice: productPrice,
                                                     productId: parseInt(props.match.params.id)
                                                 },
-                                            }}> Weiter zur Anfrage </Link></button>
+                                            }}> {t('Weiter zur Anfrage')} </Link></button>
                                         </div>
                                     </div>
                                 </div>
@@ -226,32 +225,32 @@ const ArtDetail = (props) => {
                         <div className="row">
                             <div className="col-md-12 paddinga">
                                 <div className="for-last-heading">
-                                    <h2>Details</h2>
+                                    <h2>{t('Details')}</h2>
                                 </div>
                             </div>
                         </div>
                         <div className="row for-last-heading-padding paddingaba">
                             <div className="col-md-3">
                                 <div className="for-last-heading">
-                                    <h6>Technik</h6>
+                                    <h6>{t('Technik')}</h6>
                                     <p>{productDetail.technik}</p>
                                 </div>
                             </div>
                             <div className="col-md-3">
                                 <div className="for-last-heading">
-                                    <h6>Grössen</h6>
+                                    <h6>{t('Grössen')}</h6>
                                     <p>84 x 117 bis 182 x 182 cm</p>
                                 </div>
                             </div>
                             <div className="col-md-3">
                                 <div className="for-last-heading">
-                                    <h6>Auftragsform</h6>
+                                    <h6>{t('Auftragsform')}</h6>
                                     <p>{productDetail.aufstragsform} </p>
                                 </div>
                             </div>
                             <div className="col-md-3">
                                 <div className="for-last-heading">
-                                    <h6>Länge</h6>
+                                    <h6>{t('Länge')}</h6>
                                     <p>175 cm</p>
                                 </div>
                             </div>

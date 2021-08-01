@@ -103,7 +103,7 @@ const ArtDetailStepThree = (props) => {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="theory">
-                                <h1>Make it Youniq</h1>
+                                <h1>{t('Make it Youniq')}</h1>
                             </div>
                         </div>
                     </div>
@@ -117,7 +117,7 @@ const ArtDetailStepThree = (props) => {
                         <div className="col-md-9">
                             <div className="arrow">
                                 <i className="fas fa-angle-left" />
-                                <h1 onClick={() => history.goBack()}>Zurück</h1>
+                                <h1 onClick={() => history.goBack()}>{t('Zurück')}</h1>
                             </div>
                             <div className="theory2">
                             </div>
@@ -130,12 +130,12 @@ const ArtDetailStepThree = (props) => {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="form">
-                                <h1>kontaktangaben</h1>
+                                <h1>{t('kontaktangaben')}</h1>
                                 <form onSubmit={handleSubmit(onSubmit)}>
 
                                     <div className="inner-form">
                                         <input className="form1"
-                                            placeholder="Vorname"
+                                            placeholder={t('Vorname')}
                                             {...register("name", {
                                                 required: true,
                                                 maxLength: 20,
@@ -151,7 +151,7 @@ const ArtDetailStepThree = (props) => {
                                         )}
 
                                         <input className="form1"
-                                            placeholder="Nach name"
+                                            placeholder={t('Nach name')}
                                             {...register("surname", {
                                                 required: true,
                                                 maxLength: 20,
@@ -168,7 +168,7 @@ const ArtDetailStepThree = (props) => {
 
                                         <input
                                             id="email"
-                                            placeholder="E-Mail"
+                                            placeholder={t('E-Mail')}
                                             className="form1"
                                             {...register("email", {
                                                 required: "required",
@@ -184,7 +184,7 @@ const ArtDetailStepThree = (props) => {
                                         <input
                                             id="phone"
                                             className="form1"
-                                            placeholder="Telefonnummer"
+                                            placeholder={t('Telefonnummer')}
                                             {...register("phone", {
                                                 required: "required",
                                                 minLength: 6, maxLength: 12
@@ -195,7 +195,7 @@ const ArtDetailStepThree = (props) => {
 
                                         <input
                                             id="address1"
-                                            placeholder="Strasse / Hausnummer"
+                                            placeholder={t('Strasse / Hausnummer')}
                                             className="form1"
                                             {...register("address1", {
                                                 required: "required",
@@ -205,7 +205,7 @@ const ArtDetailStepThree = (props) => {
                                         {errors.address1 && <p className="alert alert-danger">{errors.address1.message}</p>}
                                         <input
                                             id="address2"
-                                            placeholder="PLZ / Stadt"
+                                            placeholder={'PLZ / Stadt'}
                                             className="form1"
                                             {...register("address2", {
                                                 required: "required",
@@ -216,7 +216,7 @@ const ArtDetailStepThree = (props) => {
 
                                         <input
                                             id="country"
-                                            placeholder="Country"
+                                            placeholder={t('Land')}
                                             className="form1"
                                             {...register("country", {
                                                 required: "required",
@@ -233,7 +233,7 @@ const ArtDetailStepThree = (props) => {
                                     <br />
                                     <input type="checkbox" id="vehicle1" name="vehicle1" defaultValue="Bike" className="cbox" />
                                     <label htmlFor="vehicle1">lch akzeptiere die <span className="agb">AGBs</span></label><br /> */}
-                                        <div className="ankr"><input type={'submit'} /></div>
+                                        <div className="ankr"><input type={'submit'} value={t('Anfrage abschicken')} /></div>
                                     </div>
                                 </form>
                             </div>

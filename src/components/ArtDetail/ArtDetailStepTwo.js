@@ -178,7 +178,7 @@ const ArtDetailStepTwo = (props) => {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="theory">
-                                <h1>Make it Youniq</h1>
+                                <h1>{t('Make it Youniq')}</h1>
                             </div>
                         </div>
                     </div>
@@ -192,7 +192,7 @@ const ArtDetailStepTwo = (props) => {
                         <div className="col-md-9">
                             <div className="arrow">
                                 <i className="fas fa-angle-left" />
-                                <h1 onClick={() => history.goBack()}>Zurück {i18n.language}</h1>
+                                <h1 onClick={() => history.goBack()}>{t('Zurück')} </h1>
                             </div>
                             <div className="theory2">
                             </div>
@@ -206,8 +206,8 @@ const ArtDetailStepTwo = (props) => {
                         <div className="col-md-12">
                             <div className="form">
                                 <div className="textmrg">
-                                    <h1>Sende uns eine unverbindliche Anfrage</h1>
-                                    <h2>Style Biespiele</h2>
+                                    <h1>{t('Sende uns eine unverbindliche Anfrage')}</h1>
+                                    <h2>{t('Style Biespiele')}</h2>
                                 </div>
                                 <div className="row">
                                     <div className="col-md-12">
@@ -234,7 +234,7 @@ const ArtDetailStepTwo = (props) => {
                                 <div className="row">
                                     <div className="col-md-12">
                                         <div className="textmrg2">
-                                            <h2>Gewünschte Größe</h2>
+                                            <h2>{t('Gewünschte Größe')}</h2>
                                         </div>
                                     </div>
                                 </div>
@@ -242,12 +242,12 @@ const ArtDetailStepTwo = (props) => {
                                     <div className="col-md-12">
                                         <div className="textmrg2">
                                             <div className="lange">
-                                                <h1>Länge</h1>
+                                                <h1>{t('Länge')}</h1>
                                                 <h3>{productData.height}  <span className="i">〡</span>  cm</h3>
                                             </div>
                                             <h4>x</h4>
                                             <div className="lange">
-                                                <h1>Breite</h1>
+                                                <h1>{t('Breite')}</h1>
                                                 <h3>{productData.width}  <span className="i">〡</span>  cm</h3>
                                             </div>
                                         </div>
@@ -256,7 +256,7 @@ const ArtDetailStepTwo = (props) => {
                                 <div className="row">
                                     <div className="col-md-12">
                                         <div className="textmrg2">
-                                            <h2>Gewünschtes Motiv </h2>
+                                            <h2>{t('Gewünschtes Motiv')} </h2>
                                         </div>
                                     </div>
                                 </div>
@@ -284,7 +284,7 @@ const ArtDetailStepTwo = (props) => {
                                                                             <div className="ii">
                                                                                 <img src={customImage} />
                                                                             </div>
-                                                                            <p>Vorlage hier ablegen</p>
+                                                                            <p>{t('Vorlage hier ablegen')}</p>
                                                                         </div>
                                                                         <input type="file" name="img_logo" className="dropzone" onChange={handleChangeImage} />
                                                                     </div>
@@ -299,17 +299,17 @@ const ArtDetailStepTwo = (props) => {
                                     <div className="col-md-7 for-center d-flex">
                                         <div className="textmrg3">
                                             <input type="checkbox" id="vehicle1" name="useCustomImage" checked={useCustomImage} onChange={handleOnChangeCheckBox}  className="cbox" />
-                                            <label htmlFor="vehicle1"><span className="agb">Motiv aus dem hochgeladenen Bild</span></label>
+                                            <label htmlFor="vehicle1"><span className="agb">{t('Motiv aus dem hochgeladenen Bild')}</span></label>
                                             <br />
                                             <input type="checkbox" id="vehicle1" name="wouldLikeToBeSurprised" onChange={handleOnChangeCheckBox} checked={wouldLikeToBeSurprised} className="cbox" />
-                                            <label htmlFor="vehicle1"><span className="agb">Ich möchte überrascht werden</span></label>
+                                            <label htmlFor="vehicle1"><span className="agb">{t('Ich möchte überrascht werden')}</span></label>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="row">
                                     <div className="col-md-12">
                                         <div className="textmrg2">
-                                            <h2>Rahmenart wählen</h2>
+                                            <h2>{t('Rahmenart wählen')}</h2>
                                         </div>
                                     </div>
                                 </div>
@@ -332,13 +332,13 @@ const ArtDetailStepTwo = (props) => {
                                 <div className="row">
                                     <div className="col-md-12">
                                         <div className="textmrg2">
-                                            <h2>Beschreibe, was du gerne hättest</h2>
+                                            <h2>{t('Beschreibe, was du gerne hättest')}</h2>
                                         </div>
                                     </div>
                                     <div className="col-md-12">
                                         <div className="textmrg6">
                                           
-                                                <textarea name="comments" onChange={handleOnChangeComment} id="text" cols={30} rows={10}  placeholder="    Deine Wünsche" className="form4" value={comments} />
+                                                <textarea name="comments" onChange={handleOnChangeComment} id="text" cols={30} rows={10}  placeholder={t('Deine Wünsche')} className="form4" value={comments} />
                                             
                                         </div>
                                     </div>
@@ -355,7 +355,7 @@ const ArtDetailStepTwo = (props) => {
                                                   customImage: customImage,
                                                   frameType: frameType
                                                  },
-                                            }}> Weiter </Link>
+                                            }}> {t('Weiter')} </Link>
                                                 {/* <a href="#"></a> */}
                                                 
                                                 </div>
