@@ -1,6 +1,8 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const HowItWorksText = () => {
+    const {t, i18n} = useTranslation();
     return (
         <React.Fragment>
              <div className="container">
@@ -10,11 +12,11 @@ const HowItWorksText = () => {
                                     <div className="col-text-a">
                                         <h1 className="col-heading">
                                             <span className="col-text-span">
-                                                Wie's funktioniert: <br />
+                                                {t("Wie's funktioniert")}: <br />
                                             </span>
-                                            Verständins von kunst ist <br />
-                                            individuell,darum sollte Deine <br />
-                                            Kunst auch persönlich sein.
+                                            {t('Verständins von kunst ist')} <br />
+                                            {t('individuell,darum sollte Deine')} <br />
+                                            {t('Kunst auch persönlich sein.')}
                                         </h1>
                                     </div>
                                 </div>

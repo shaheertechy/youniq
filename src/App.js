@@ -12,6 +12,7 @@ import { I18nextProvider, Trans } from 'react-i18next';
 import i18n from './i18n';
 import ArtDetailStepTwo from './components/ArtDetail/ArtDetailStepTwo';
 import ArtDetailStepThree from './components/ArtDetail/ArtDetailStepThree';
+import AboutUs from './components/AboutUs';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
     <BrowserRouter>
         <Route exact path="/how-it-works" component={HowItWorks} />
         <Route exact path="/contact-us" component={ContactUs} />
+        <Route exact path="/about-us" component={AboutUs} />
         <Route exact path="/find-your-style" component={FindYourStyle} />
         {/* <Route exact path="/make-your-youniq/:id" component={ArtDetail} /> */}
         <Route exact path="/make-your-youniq/:id" render={(props) => <ArtDetail {...props} /> } />

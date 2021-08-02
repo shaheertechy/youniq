@@ -29,7 +29,7 @@ section.main {
     margin: 100px 0;
 }
 .simple-gallery img {
-    height: 55%;
+    /* height: 55%; */
 }
 .mySlides img {
     width: 100% !important;

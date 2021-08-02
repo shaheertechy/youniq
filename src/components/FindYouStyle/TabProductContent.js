@@ -1,16 +1,18 @@
 //import { Carousel } from 'bootstrap';
 import React, { useEffect, useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel'
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import Loader from '../Loader';
 
 const TabProductContent = (props) => {
+    const { t, i18n } = useTranslation();
     const [categories, setCategories] = useState({});
 
     const [isLoader, setIsLoader] = useState(true);
 
     const handleOnclickCategory = async (id) => {
-        fetch("https://stg.youniq.art/api/data/product/list?categoryId=" + id)
+        fetch(process.env.REACT_APP_BASE_URL+"data/product/list?categoryId=" + id)
             .then(res => res.json())
             .then(
                 (result) => {
@@ -54,7 +56,7 @@ const TabProductContent = (props) => {
                                                     /></Link>
                                                     <div style={{ clear: 'both' }} /> &nbsp; &nbsp;
                                                     <div className="texting">
-                                                        <h2><span>Ab CHF  &nbsp;  </span>{product.price}</h2><Link to={'/make-your-youniq/' + product.productId}>Make it youniq</Link></div>
+                                                        <h2><span>{t('Ab')} CHF  &nbsp;  </span>{product.price}</h2><Link to={'/make-your-youniq/' + product.productId}>Make it youniq</Link></div>
 
                                                 </Carousel.Item>
                                             )

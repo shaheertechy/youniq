@@ -27,25 +27,25 @@ const Testimonials = (props) => {
                                             <div className="float1"><img src="images/testim.PNG" /></div>
                                             <div className="float">
                                                 <p className="slider__txt">«{props.t("Ich wusste nicht von Anfang an, was ich haben wollte, doch dank der erstklassigen Beratung habe ich nun einen wahren Eyecatcher in meinem Eingang hängen. Vielen Dank für eure Hilfe!")}»</p>
-                                                <h6>Fabienne</h6> </div>
+                                                <h6>{props.t('Fabienne')}</h6> </div>
                                         </div>
                                         <div className="slider__contents">
                                             <div className="float2"><img src="images/testim.PNG" /></div>
                                             <div className="float">
                                                 <p className="slider__txt">«{props.t("Ich wusste nicht von Anfang an, was ich haben wollte, doch dank der erstklassigen Beratung habe ich nun einen wahren Eyecatcher in meinem Eingang hängen. Vielen Dank für eure Hilfe!")}»</p>
-                                                <h6>Fabienne</h6> </div>
+                                                <h6>{props.t('Fabienne')}</h6> </div>
                                         </div>
                                         <div className="slider__contents">
                                             <div className="float3"><img src="images/testim.PNG" /></div>
                                             <div className="float">
                                                 <p className="slider__txt">«{props.t("Ich wusste nicht von Anfang an, was ich haben wollte, doch dank der erstklassigen Beratung habe ich nun einen wahren Eyecatcher in meinem Eingang hängen. Vielen Dank für eure Hilfe!")}»</p>
-                                                <h6>Fabienne</h6> </div>
+                                                <h6>{props.t('Fabienne')}</h6> </div>
                                         </div>
                                         <div className="slider__contents">
                                             <div className="float4"><img src="images/testim.PNG" /></div>
                                             <div className="float">
                                                 <p className="slider__txt">«{props.t("Ich wusste nicht von Anfang an, was ich haben wollte, doch dank der erstklassigen Beratung habe ich nun einen wahren Eyecatcher in meinem Eingang hängen. Vielen Dank für eure Hilfe!")}»</p>
-                                                <h6>Fabienne</h6> </div>
+                                                <h6>{props.t('Fabienne')}</h6> </div>
                                         </div>
                                     </div>
                                 </div>

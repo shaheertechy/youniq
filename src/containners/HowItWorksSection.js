@@ -57,7 +57,7 @@ const HowItWorksSection = () => {
                                 <div className="image-round"><img src="images/round4.PNG" /></div>
                                 <div className="text-round">
                                     <h5>{t("Erfreue dich an deiner Kunst")}</h5>
-                                    <p>{t("Gratulation, du bist jetzt Kunstsammleri:in. Schon bald kannst du dein persönliches Kunstwerk aufhängen. Einfach Youniq!")}</p>
+                                    <p>{t("Gratulation, du bist jetzt Kunstsammleri in. Schon bald kannst du dein persönliches Kunstwerk aufhängen. Einfach Youniq!")}</p>
                                 </div>
                             </div>
                         </div>

@@ -18,7 +18,7 @@ const ProductTabs = () => {
   
 
     useEffect(() => {
-        fetch("https://stg.youniq.art/api/data/category/list")
+        fetch(process.env.REACT_APP_BASE_URL+"data/category/list")
             .then(res => res.json())
             .then(
                 (result) => {
