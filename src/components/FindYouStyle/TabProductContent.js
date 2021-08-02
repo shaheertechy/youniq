@@ -12,7 +12,7 @@ const TabProductContent = (props) => {
     const [isLoader, setIsLoader] = useState(true);
 
     const handleOnclickCategory = async (id) => {
-        fetch("https://stg.youniq.art/api/data/product/list?categoryId=" + id)
+        fetch(process.env.REACT_APP_BASE_URL+"data/product/list?categoryId=" + id)
             .then(res => res.json())
             .then(
                 (result) => {

@@ -24,7 +24,7 @@ const ArtDetailStepTwo = (props) => {
     useEffect(() => {
         // console.log("===========");
         // console.log(productData);
-        fetch("https://stg.youniq.art/api/data/product/" + props.match.params.id)
+        fetch(process.env.REACT_APP_BASE_URL+"data/product/" + props.match.params.id)
             .then(res => res.json())
             .then(
                 (result) => {

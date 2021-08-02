@@ -68,7 +68,7 @@ const ArtDetailStepThree = (props) => {
         };
 
         alert(JSON.stringify(requestOptions));
-        fetch('https://stg.youniq.art/api/action/order', requestOptions)
+        fetch(process.env.REACT_APP_BASE_URL+'action/order', requestOptions)
             .then(response => {
                 alert(response.status);
                 if (response.status == 200) {   // *** This can be just `if (response.ok) {`

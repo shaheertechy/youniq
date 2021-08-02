@@ -19,7 +19,7 @@ const ArtDetail = (props) => {
     const [isLoader, setIsLoader] = useState(true);
     useEffect(() => {
 
-        fetch("https://stg.youniq.art/api/data/product/" + props.match.params.id)
+        fetch(process.env.REACT_APP_BASE_URL+"data/product/" + props.match.params.id)
             .then(res => res.json())
             .then(
                 (result) => {
