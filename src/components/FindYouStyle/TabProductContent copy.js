@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const TabProductContent = (props) => {
     const [categories, setCategories] = useState({});
-
+   // https://jsfiddle.net/x3Lmj62c/6/
     const handleOnclickCategory = (id) => {
         fetch("https://stg.youniq.art/api/data/product/list?categoryId=" + id)
             .then(res => res.json())

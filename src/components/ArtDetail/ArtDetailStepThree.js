@@ -45,7 +45,7 @@ const ArtDetailStepThree = (props) => {
             method: 'POST',
             headers: {
                 'Content-Type': '*/*',
-                'Accept': 'application/json'                                                    
+                'Accept': '*/*'                                                    
             },
             body: JSON.stringify({
                 "acceptedAgbs":true,
@@ -85,8 +85,8 @@ const ArtDetailStepThree = (props) => {
                 console.log(data);
             })
             .catch(error => {
-                alert(error)
-                console.log(error);
+                alert(error.message)
+                console.log(error.message);
             });
     }; // your form submit function which will invoke after successful validation
 
