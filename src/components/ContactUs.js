@@ -52,7 +52,7 @@ const ContactUs = () => {
                         </div>
                         <div className="col-md-9">
                             <div className="arrow">
-                                <i className="fas fa-angle-left" />
+                                <i className="fa fa-angle-left" />
                                 <h1>Zurück</h1>
                             </div>
                             <div className="theory2">

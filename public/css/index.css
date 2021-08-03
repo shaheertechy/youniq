@@ -2,12 +2,13 @@
             common style
 ***************************************/
 
-@import url("https://p.typekit.net/p.css?s=1&k=ipw5bij&ht=tk&f=32211.32212.42831.42832.32217.32219&a=1108611&app=typekit&e=css");
+
+@import url("https://use.typekit.net/ipw5bij.css");
 
 @font-face {
-font-family:"circe";
+font-family: circe, sans-serif;
 src:url("https://use.typekit.net/af/37a4b2/00000000000000007735afd8/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/37a4b2/00000000000000007735afd8/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/37a4b2/00000000000000007735afd8/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
-font-display:auto;font-style:normal;font-weight:400;
+font-display:auto;font-style:Regular;font-weight:400;
 }
 
 @font-face {
@@ -207,6 +208,7 @@ input.slider__nav {
     color: #000;
     letter-spacing: 1.5px;
     font-weight: 100;
+    font-family: auto;
 }
 
 .nav{
@@ -233,21 +235,33 @@ input.slider__nav {
     height: 100%;
     align-items: center;
 }
+.nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    background-color: #fff;
+    width: 130px;
+    text-align: center;
+    box-shadow: 1px 1px 1px 1px grey;
+    border-radius: 4px;
+    padding: 10px 20px;
+}
 .nav_link {
     padding: 0 14px;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #000;
+    color: #888686;
     -webkit-appearance: none;
     cursor: pointer;
     pointer-events: visiblePainted;
 }
-.nav_link:hover {
+.nav_link:hover, active {
     color: #000;
     border-bottom: 2px solid #20c28b;
     transition: 50ms;
+    font-weight: 700;
 }
 .drop_nav_icon{
     width: 12px;
@@ -637,13 +651,13 @@ a {
 .hero-section-banner:before {
     content: "";
     position: absolute;
-    right: 114px;
     background-image: url(../images/dumm1.png);
     background-size: 162px;
-    width: 100%;
-    height: 100%;
+    width: 15%;
+    height: 58%;
     background-repeat: no-repeat;
     top: 31%;
+    left: -104px;
 }
 .container-fluid.ten1:before {
     content: "";

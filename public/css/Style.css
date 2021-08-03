@@ -91,15 +91,23 @@ p.col-img-heading-p {
 }
 
 .for-background::before {
-    content: " ";
+    content: "newgering? Endeke denien stile";
     position: absolute;
-    width: 16.5%;
-    height: 253px;
     background-color: #36c28e;
     border-radius: 50%;
     right: 173px;
     box-shadow: 0px 0px 100px -80px;
     top: -120px;
+    padding: 69px 47px;
+    color: #fff;
+    transform: rotate(
+-16deg
+);
+    letter-spacing: 1px;
+    font-size: 23px;
+    width: 18%;
+    word-break: break-word;
+    text-align: center;
 }
 
 
