@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
 
@@ -10,7 +11,7 @@ const Banner = () => {
                 <div className="col-md-12">
                     <div className="hero-section-banner">
                         <h2>{t("Gebe Kunst Auftrag")}<br /><span style={{ color: '#207d2094' }}>{t("Genau nach deinem Stil")}</span></h2>
-                        <p>{t("Unsere Künstler innen erstellen ein eigenes Kunstwerk nur für dich. Du wählst den Style und was drauf sein soll.")}</p> <a href="#">{t("Finde deinen stil")}</a> </div>
+                        <p>{t("Unsere Künstler innen erstellen ein eigenes Kunstwerk nur für dich. Du wählst den Style und was drauf sein soll.")}</p> <Link to={'/find-your-style'} >{t("Finde deinen stil")}</Link> </div>
                 </div>
             </div>
             <div className="row">
