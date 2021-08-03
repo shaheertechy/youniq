@@ -191,8 +191,8 @@ const ArtDetailStepTwo = (props) => {
                         </div>
                         <div className="col-md-9">
                             <div className="arrow">
-                               <a href="make-your-youniq/26"> <i className="fa fa-angle-left" />
-                                <h1 onClick={() => history.goBack()}>{t('Zurück')} </h1></a>
+                               <a onClick={() => history.goBack()}> <i className="fa fa-angle-left" />
+                                <h1 >{t('Zurück')} </h1></a>
                             </div>
                             <div className="theory2">
                             </div>

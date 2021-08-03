@@ -234,13 +234,13 @@ const ArtDetailStepThree = (props) => {
                                     <br />
                                     <input type="checkbox" id="vehicle1" name="vehicle1" defaultValue="Bike" className="cbox" />
                                     <label htmlFor="vehicle1">lch akzeptiere die <span className="agb">AGBs</span></label><br /> */}
-                                        <div className="ankr">{isSubmit ? <React.Fragment><i class="fa fa-spinner fa-spin"></i>Loading </React.Fragment> : <input type={'submit'} value={t('Anfrage abschicken')} />}</div>
+                                        <div className="ankr">{isSubmit ? <React.Fragment><i className="fa fa-spinner fa-spin"></i>Loading </React.Fragment> : <input type={'submit'} value={t('Anfrage abschicken')} />}</div>
                                     </div>
                                 </form>
                             </div>
                             <div className="art-detail-chf-right">
-                              <sub>Preis</sub>
-                              <h1>2815<span></span>CHF</h1>
+                              <sub>{t('Preis')}</sub>
+                              <h1>{props.location.state.productPrice}<span></span>CHF</h1>
                             </div>
                         </div>
                     </div>
