@@ -191,8 +191,8 @@ const ArtDetailStepTwo = (props) => {
                         </div>
                         <div className="col-md-9">
                             <div className="arrow">
-                                <i className="fas fa-angle-left" />
-                                <h1 onClick={() => history.goBack()}>{t('Zurück')} </h1>
+                               <a href="make-your-youniq/26"> <i className="fa fa-angle-left" />
+                                <h1 onClick={() => history.goBack()}>{t('Zurück')} </h1></a>
                             </div>
                             <div className="theory2">
                             </div>
@@ -218,7 +218,7 @@ const ArtDetailStepTwo = (props) => {
                                                     return (
                                                         <li key={index}>
 
-                                                            <img className={productData.artImage == product.imageUrl ? 'active' : ''} style={{ width: '50px' }} src={product.imageUrl} />
+                                                           <a href="" className="active"><img className={productData.artImage == product.imageUrl ? 'active' : ''} style={{ width: '50px' }} src={product.imageUrl} /></a> 
 
                                                         </li>
                                                     )

@@ -29,11 +29,14 @@ section.main {
     margin: 100px 0;
 }
 .simple-gallery img {
-    /* height: 55%; */
+    height: 55%;
+}
+p.for-box-p input {
+    border: none;
 }
 .mySlides img {
     width: 100% !important;
-    margin-left: 22px;
+    margin-left: 0px;
 }
 .for-first-heading h1 {
     font-size: 50px;
@@ -44,6 +47,8 @@ section.main {
     display: -ms-flexbox!important;
     display: flex!important;
     align-items: center;
+    position: relative  !important;
+    right: 0px  !important;
 }
 
 .for-first-heading {
@@ -131,7 +136,7 @@ li.for-slider-lib a img {
     display: flex;
     width: 100%;
     height: auto;
-    margin-top: 20px;
+    margin-top: 0px;
     padding-bottom: 25px;
     margin-left: 15px;
 }

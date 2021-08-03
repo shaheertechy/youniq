@@ -10,7 +10,7 @@ const Instructions = () => {
                         <div className="row second-section">
                             <div className="col-md-2">
                                 <div className="col-img">
-                                    <img src="img/Capture.PNG" alt="" />
+                                    <img src="img/Capture.PNG" alt="fjvgbh" />
                                 </div>
                             </div>
                             <div className="col-md-10">

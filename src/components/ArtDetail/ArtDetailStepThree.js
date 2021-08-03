@@ -116,7 +116,7 @@ const ArtDetailStepThree = (props) => {
                         </div>
                         <div className="col-md-9">
                             <div className="arrow">
-                                <i className="fas fa-angle-left" />
+                                <i className="fa fa-angle-left" />
                                 <h1 onClick={() => history.goBack()}>{t('Zurück')}</h1>
                             </div>
                             <div className="theory2">
@@ -236,6 +236,10 @@ const ArtDetailStepThree = (props) => {
                                         <div className="ankr"><input type={'submit'} value={t('Anfrage abschicken')} /></div>
                                     </div>
                                 </form>
+                            </div>
+                            <div className="art-detail-chf-right">
+                              <sub>Preis</sub>
+                              <h1>2815<span></span>CHF</h1>
                             </div>
                         </div>
                     </div>
