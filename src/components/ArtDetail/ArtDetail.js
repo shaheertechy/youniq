@@ -97,7 +97,7 @@ const ArtDetail = (props) => {
         <React.Fragment>
             <section className="main">
                 <div className="container-fluid">
-                    <Header changeLanguage={changeLanguage} currentLanguageVersion={currentLanguageVersion} lng={lng} />
+                    <Header />
                     <div class="container">
                         <div class="row ">
                             <div class="col-md-12 for-first-heading-speacing">
@@ -205,7 +205,7 @@ const ArtDetail = (props) => {
                                             <button type="button" className="btn"> <Link to={{
                                                 pathname: "/make-your-youniq-2/" + props.match.params.id,
                                                 state: {
-                                                    // artImage: artImage,
+                                                    artImage: artImage,
                                                     height: artLength,
                                                     width: artWidth,
                                                     productPrice: productPrice,
