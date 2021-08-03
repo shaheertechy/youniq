@@ -206,7 +206,7 @@ const ArtDetailStepTwo = (props) => {
                         <div className="col-md-12">
                             <div className="form">
                                 <div className="textmrg">
-                                    <h1>{t('Sende uns eine unverbindliche Anfrage')}{productData.artImage}</h1>
+                                    <h1>{t('Sende uns eine unverbindliche Anfrage')}</h1>
                                     <h2>{t('Style Biespiele')}</h2>
                                 </div>
                                 <div className="row">
