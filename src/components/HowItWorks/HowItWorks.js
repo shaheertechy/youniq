@@ -25,7 +25,7 @@ const HowItWorks = () => {
         <React.Fragment>
             <section className="main">
                 <div className="container-fluid">
-                    <Header changeLanguage={changeLanguage} currentLanguageVersion={currentLanguageVersion} lng={lng}/>
+                    <Header/>
                     <HowItWorksText />
                 </div>
                 <Instructions />

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Footer from './common/Footer';
 import Header from './common/Header';
 import { useTranslation, withTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 const AboutUs = () => {
 
@@ -22,7 +23,7 @@ const AboutUs = () => {
     return (
         <React.Fragment>
             <section className="container-fluid w1">
-                <Header changeLanguage={changeLanguage} currentLanguageVersion={currentLanguageVersion} lng={lng} />
+                <Header />
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
@@ -47,7 +48,7 @@ const AboutUs = () => {
               <div className="col-md 7">
                 <div className="pera">
                   <p>«{t("aboutus_paragraph_1")}</p>
-                  <div className="ankr"><a href="#">{t('aboutus_link_1')}</a></div>
+                  <div className="ankr"><Link to={'/how-it-works'} >{t('aboutus_link_1')}</Link></div>
                 </div>
               </div>
             </div>
@@ -64,7 +65,7 @@ const AboutUs = () => {
               <div className="col-md 7">
                 <div className="pera">
                   <p>{t('aboutus_paragraph_2')} </p>
-                  <div className="ankr"><a href="#">{t('aboutus_link_2')} </a></div>
+                  <div className="ankr"><Link to={'/find-your-style'}>{t('aboutus_link_2')} </Link></div>
                 </div>
               </div>
             </div>

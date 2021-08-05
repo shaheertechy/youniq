@@ -23,7 +23,7 @@ const FindYourStyle = (props) => {
         <React.Fragment>
             <section className="wrapp1">
                 <div className="container-fluid ten5">
-                    <Header changeLanguage={changeLanguage} currentLanguageVersion={currentLanguageVersion} lng={lng}  />
+                    <Header />
                     <div className="container">
                         <div className="row">
                             <div className="col-md-12">
