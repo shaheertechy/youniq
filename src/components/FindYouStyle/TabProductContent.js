@@ -12,7 +12,12 @@ const TabProductContent = (props) => {
     const [isLoader, setIsLoader] = useState(true);
 
     const handleOnclickCategory = async (id) => {
-        fetch(process.env.REACT_APP_BASE_URL+"data/product/list?categoryId=" + id)
+        var url = process.env.REACT_APP_BASE_URL + "data/product/list?categoryId=" + id;
+        if (id === 0) {
+            url = process.env.REACT_APP_BASE_URL + "data/product/list";
+        }
+        
+        fetch(url)
             .then(res => res.json())
             .then(
                 (result) => {
@@ -44,7 +49,7 @@ const TabProductContent = (props) => {
 
                             <div key={keyIndex} className="col-md-6">
                                 <div className="inner-tab">
-                                <Carousel indicators={true} fade={true}>
+                                    <Carousel indicators={true} fade={true}>
                                         {categories[keyName].map(function (product, index) {
                                             return (
                                                 <Carousel.Item key={index} >

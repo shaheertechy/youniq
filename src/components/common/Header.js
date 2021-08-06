@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { useTranslation, withTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
@@ -55,7 +56,21 @@ const Header = (props) => {
       <div className="row">
         <div className="col-md-12">
           <header className="header">
-            <nav className="navbar">
+            <Navbar bg="light" expand="lg">
+            <div className="top_nav">
+              <div className="logo"><Link to={'/'} className="nav_logo">{t("Youniq.Art")}</Link></div>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                  <Nav className="me-auto">
+                  <li className="list_item"><Link to={'/find-your-style'} className="nav_link">{t("Finde deinen stil")}</Link></li>
+                    <li className="list_item"><Link to={'/how-it-works'} className="nav_link">{t("Wie’s funktioniert")}</Link></li>
+                    <li className="list_item"><Link to={'/about-us'} className="nav_link">{t("Über Uns")}</Link></li>
+                    <li className="list_item"><button onClick={() => changeLanguageButton()} className="nav_link">{i18n.language == 'en' ? 'German Version' : 'English Version'}</button></li>
+                  </Nav>
+                </Navbar.Collapse>
+                </div>
+            </Navbar>
+            {/* <nav className="navbar">
               <div className="top_nav">
                 <div className="logo"><Link to={'/'} className="nav_logo">{t("Youniq.Art")}</Link></div>
                 <div className="nav">
@@ -70,7 +85,7 @@ const Header = (props) => {
                   <button className="nav_toggle"> <span className="icon_bar bar_1" /> <span className="icon_bar bar_2" /> <span className="icon_bar bar_3" /> </button>
                 </div>
               </div>
-            </nav>
+            </nav> */}
           </header>
         </div>
       </div>
