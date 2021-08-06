@@ -95,7 +95,28 @@ html,body{
     height: 100%;
      font-family: "circe",sans-serif !important;
 }
-
+.round2-content {
+    height: 213px;
+    background-color: #36c28e;
+    color: #fff;
+    width: 19%;
+    padding: 52px;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: 84px;
+    text-align: center;
+    font-size: 17px;
+    transform: rotate( 
+-17deg
+ );
+    line-height: 15px;
+}
+.round2-content h3 {
+    font-size: 22px;
+    margin-top: 19px;
+    font-weight: bold;
+}
 .carousel-control-next, .carousel-control-prev {
     position: absolute;
     top: 268px  !important;
@@ -207,8 +228,9 @@ input.slider__nav {
 .logo .nav_logo {
     color: #000;
     letter-spacing: 1.5px;
-    font-weight: 100;
-    font-family: auto;
+    font-weight: initial;
+    font-family: serif;
+    text-transform: capitalize;
 }
 
 .nav{
@@ -227,6 +249,7 @@ input.slider__nav {
     justify-content: center;
     align-items: center;
     height: 100%;
+    margin-top: 7px;
 }
 .list_item{
     display: flex;
@@ -246,6 +269,12 @@ input.slider__nav {
     border-radius: 4px;
     padding: 10px 20px;
 }
+.nav_link:active {
+    border-bottom: 2px solid #36c28e !important;
+}
+.hero-section-banner-tabs h2 span {
+    color: #36c28e !important;
+}
 .nav_link {
     padding: 0 14px;
     height: auto;
@@ -256,6 +285,8 @@ input.slider__nav {
     -webkit-appearance: none;
     cursor: pointer;
     pointer-events: visiblePainted;
+    font-size: 15px;
+    font-weight: 800;
 }
 .nav_link:hover, active {
     color: #000;
@@ -637,8 +668,11 @@ a {
     font-size: 46px;
     font-weight: 700;
 }
+.hero-section-banner h2 span {
+    color: #36c28e !important;
+}
 .hero-section-banner a {
-    background-color: #7bb17b;
+    background-color: #36c28e;
     color: #fff;
     padding: 10px 28px;
     border-radius: 20px;
@@ -647,6 +681,7 @@ a {
     color: #888581;
     margin-bottom: 34px;
     margin-top: 20px;
+    font-size: 24px;
 }
 .hero-section-banner:before {
     content: "";
@@ -685,6 +720,7 @@ a {
 }
 .title h2 {
     font-size: 40px;
+    font-weight: 900;
 }
 .title {
     margin-top: 200px !important;
@@ -697,21 +733,24 @@ a {
 .image-round {
     margin-right: 30px;
 }
+.image-round img {
+    width: 103px;
+}
 .text-round h5 {
-    font-size: 15px;
-    font-weight: 800;
+    font-size: 18px;
+    font-weight: bolder;
     margin-bottom: 6px;
 }
 .second-section {
     display: flex;
-    margin-top: 50px;
+    margin-top: 0px;
     
 }
 .text-round p {
-    color: #a7a5a5;
-    font-size: 12px;
+    color: #484848;
+    font-size: 15px;
     font-weight: 100;
-    width: 223px;
+    width: 281px;
 }
 .divider {
     border-bottom: 1px solid #7bb17b;
@@ -894,9 +933,10 @@ a {
 }
 .heading-die h4 {
     font-size: 16px;
-    color: #bcecdc;
+    color: #36c28e;
     margin-top: 14px;
     margin-left: 10px;
+    font-weight: 900;
 }
 .heading {
     margin: 0 auto;
@@ -938,17 +978,7 @@ a.prev {
     font-size: 46px;
     font-weight: 700;
 }
-.hero-section-banner-tabs:after {
-    content: "";
-    position: absolute;
-    background-image: url(../images/round-txt.png);
-    background-size: 196px;
-    width: 18%;
-    height: 57%;
-    background-repeat: no-repeat;
-    top: 31%;
-    right: 43px;
-}
+
 
 /*tabs*/
 

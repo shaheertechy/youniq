@@ -37,12 +37,15 @@ p.for-box-p input {
 .mySlides img {
     width: 100% !important;
     margin-left: 0px;
+    height: 670px;
 }
 .for-first-heading h1 {
     font-size: 50px;
     font-weight: 800;
 }
-
+p.for-box-p input {
+    background-color: #f0f8ff00;
+}
 .d-flex {
     display: -ms-flexbox!important;
     display: flex!important;
@@ -100,8 +103,8 @@ li.for-slider-lib a img {
 .for-padding {
     padding-top: 1px;
     padding-bottom: 1px;
-    background: #fff;
-    border: 0.1px solid #444;
+    background: #fff0;
+    border: 0;
     border-radius: 15px;
 }
 
@@ -338,8 +341,28 @@ img {
 .for-border-radius {
     border: 4px solid rgba(151, 151, 151, 0.2);
     border-radius: 10px;
+    height: 79px;
 }
-
+a.active img {
+    height: 59px;
+}
+.sticky-price {
+    position: fixed;
+    background-color: #fff;
+    z-index: 9999;
+    right: 115px;
+    padding: 13px 10px 9px 10px;
+    border-radius: 15px;
+    width: 140px;
+    /* text-align: center; */
+}
+.sticky-price h3 {
+    font-weight: bold;
+    text-align: left;
+}
+img.for-box-border:active {
+    border: 2px solid #20c28b  !important;
+}
 .active,
 .demo:hover {
     opacity: 1;

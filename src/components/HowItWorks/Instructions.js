@@ -19,6 +19,7 @@ const Instructions = () => {
                                     <p className="col-img-heading-p for-pera-color">{t('Lass Dich aus unserer Auswahl an bereits existierenden')} <br /> {t('Kunstwerken inspirieren und suche eines aus,welches Deinem')} <br /> 
                                     {t('Stil und Deinen Preisvorstellungen entspricht.')}</p>
                                 </div>
+                                <div className="round-content"><sub>{t('round')}</sub><h3>{t('Endeke')}</h3></div>
                             </div>
                         </div>
                         <div className="row second-section">

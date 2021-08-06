@@ -1,10 +1,10 @@
 {
-    "Finde deinen stil": "Finde deinen stil",
+    "Finde deinen stil": "Finde deinen Stil",
     "Wie’s funktioniert": "Wie’s funktioniert",
     "Über Uns": "Über Uns",
-    "Gebe Kunst Auftrag": "Gebe Kunst Auftrag",
-    "Genau nach deinem Stil": "Genau nach deinem Stil",
-    "Unsere Künstler innen erstellen ein eigenes Kunstwerk nur für dich. Du wählst den Style und was drauf sein soll.": "Unsere Künstler : innen erstellen ein eigenes Kunstwerk nur für dich. Du wählst den Style und was drauf sein soll.",
+    "Gebe Kunst Auftrag": "Gebe Kunst in Auftrag.",
+    "Genau nach deinem Stil": "Genau nach deinem Stil.",
+    "Unsere Künstler innen erstellen ein eigenes Kunstwerk nur für dich. Du wählst den Style und was drauf sein soll.": "Lass dich jetzt von bestehenden kunsterwerken inspirieren und erhalte ein Angebot.Einfach und Younique",
     "Wie's funktionert": "Wie's funktionert",
     "Wähle deinen Style": "Wähle deinen Style",
     "Wie soll das nur für dich erschaffene Kunstwerk aussehen? Lass dich von bereits existierenden Kunstwerken inspirieren und finde deinen Style.": "Wie soll das nur für dich erschaffene Kunstwerk aussehen? Lass dich von bereits existierenden Kunstwerken inspirieren und finde deinen Style.",
@@ -15,9 +15,11 @@
     "Die Lieferung ist für die gesamte Schweiz gratis": "Die Lieferung ist für die gesamte Schweiz gratis",
     "Testimonials": "Testimonials",
     "Ich wusste nicht von Anfang an, was ich haben wollte, doch dank der erstklassigen Beratung habe ich nun einen wahren Eyecatcher in meinem Eingang hängen. Vielen Dank für eure Hilfe!": "Ich wusste nicht von Anfang an, was ich haben wollte, doch dank der erstklassigen Beratung habe ich nun einen wahren Eyecatcher in meinem Eingang hängen. Vielen Dank für eure Hilfe!",
-    "kontakt": "kontakt",
+    "kontakt": "Kontakt",
     "Datenschutzerklarung": "Datenschutzerklarung",
     "Impressum": "Impressum",
+    "Über 100 Styles": "Über 100 Stile ",
+    "Finde deinen. Und lass dir passende Kunst anfertigen.": "Finde deinen.Und lass dir die Kunst nach dem machan.",
     "Gratulation, du bist jetzt Kunstsammleri in. Schon bald kannst du dein persönliches Kunstwerk aufhängen. Einfach Youniq!":"Gratulation, du bist jetzt Kunstsammleri in. Schon bald kannst du dein persönliches Kunstwerk aufhängen. Einfach Youniq!",
     "Fabienne": "Fabienne",
     "Make it Youniq": "Make it Youniq",
@@ -76,9 +78,12 @@
     "Sobald Dein Werk fertiggestellt ist,informieren wir Dich über die": "Sobald Dein Werk fertiggestellt ist,informieren wir Dich über die",
     "Kunstwerk aufhängen": "Kunstwerk aufhängen",
     "Zustellung und schon kannst Du Dein ganz persönliches": "Zustellung und schon kannst Du Dein ganz persönliches",
-    "Onlineportfilio":"Onlineportfilio",
+    "Onlineportfilio":"Onlineportfolio",
+    "portfolio-content":"Entdecken Sie unser ständig wechselndes Online-Portfolio und wählen Sie ein bestehendes Kunstwerk aus. Passen Sie es in unserem Make-It-Youniq-Tool an und wir senden Ihnen ein Angebot für die Kunst Ihrer Träume. Nach Fertigstellung erhalten Sie Ihr sicher verpacktes Unikat.",
     "Unsere Talente": "Unsere Talente",
+    "talent-content":"Youniq.Art stellt künstlerisches Talent in den Mittelpunkt. Die Namen unserer Künstler sind anonymisiert und ihre Bezeichnung zeigt nur eine Kombination aus Vor- und Nachnamen. Ihren Künstlernamen erhalten Sie nach Auftragserteilung oder auf Anfrage. Unsere Künstler sind etablierte internationale Künstler, Kunststudenten oder hochbegabte Autodidakten. Fang den nächsten Picasso!",
     "Massgeschneidert": "Massgeschneidert",
+    "message-content":"At Youniq.Art you get a first-class service, commission high-quality art and support the artists. And all this at fair and transparent conditions and prices. Even before you contact us, you can see the price range for your artwork in the Make-it-Youniq-tool.",
     "Your Unique Piece of Art:": "Your Unique Piece of Art:",
     "Youniq.Art besteht aus einem": "Youniq.Art besteht aus einem",
     "Team von Kunsthistoriker innen": "Team von Kunsthistoriker innen",
@@ -88,8 +93,11 @@
     "aboutus_link_2":"Finde deinen Style",
     "Adressen": "Adressen",
     "Warum": "Warum",
-    "Was": "Was"
-
+    "Was": "Was",
+    "round": "newgering?",
+    "Endeke":"Endeke denien stile",
+    "Brauchst":"Brauchst Du hilfy?",
+    "lass":"lass ditch von beraten"
 
     
 

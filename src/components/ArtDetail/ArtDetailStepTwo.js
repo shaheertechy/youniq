@@ -180,6 +180,7 @@ const ArtDetailStepTwo = (props) => {
                             <div className="theory">
                                 <h1>{t('Make it Youniq')}</h1>
                             </div>
+                            <div className="sticky-price"><sup>Preis</sup><h3>2815<sub>CHF</sub></h3></div>
                         </div>
                     </div>
                 </section>
@@ -243,12 +244,13 @@ const ArtDetailStepTwo = (props) => {
                                         <div className="textmrg2">
                                             <div className="lange">
                                                 <h1>{t('Länge')}</h1>
-                                                <h3>{productData.height}  <span className="i">〡</span>  cm</h3>
+                                                <h3><input type="number" placeholder="0"></input><span className="i">〡</span>  cm</h3>
+                                                {/* <h3>{productData.height}  <</h3> */}
                                             </div>
                                             <h4>x</h4>
                                             <div className="lange">
                                                 <h1>{t('Breite')}</h1>
-                                                <h3>{productData.width}  <span className="i">〡</span>  cm</h3>
+                                                <h3><input type="number" placeholder="0"></input><span className="i">〡</span>  cm</h3>
                                             </div>
                                         </div>
                                     </div>

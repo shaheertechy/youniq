@@ -20,7 +20,7 @@ const Header = (props) => {
                       <div className="logo"><Link to={'/'} className="nav_logo">{t("Youniq.Art")}</Link></div>
                       <div className="nav">
                         <ul className="nav_item">
-                          <li className="list_item"><Link to={'/find-your-style'} className="nav_link">{t("Finde deinen stil")}</Link></li>
+                          <li className="list_item active"><Link to={'/find-your-style'} className="nav_link " >{t("Finde deinen stil")}</Link></li>
                           <li className="list_item"><Link to={'/how-it-works'} className="nav_link">{t("Wie’s funktioniert")}</Link></li>
                           <li className="list_item"><Link to={'/about-us'} className="nav_link">{t("Über Uns")}</Link></li>
                           <li className="list_item"><button onClick={changeLanguageButton} className="nav_link">{i18n.language == 'en' ? 'German Version' : 'English Version'}</button></li>

@@ -132,6 +132,8 @@ const ContactUs = () => {
                                         <br />
                                         <input type="checkbox" id="vehicle1" name="vehicle1" defaultValue="Bike" className="cbox" />
                                         <label htmlFor="vehicle1">lch akzeptiere die <span className="agb">AGBs</span></label><br /> */}
+                                        <input  type="checkbox" id="vehicle1" name="vehicle1" defaultValue="Bike" className="cbox" />
+                                        <label className="cbox-label" htmlFor="vehicle1">lch akzeptiere die <span className="agb"></span></label><br />
                                         <div className="ankr"><input type={'submit'} value="Anfrage abschicken" /></div>
                                     </div>
                                 </form>

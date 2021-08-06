@@ -43,7 +43,9 @@ span.col-text-span {
     color: #111;
 }
 
-
+.round-content h3 {
+    font-weight: 900;
+}
 /* section 1 end */
 
 
@@ -90,24 +92,22 @@ p.col-img-heading-p {
     color: #7e7e7ec9;
 }
 
-.for-background::before {
-    content: "newgering? Endeke denien stile";
-    position: absolute;
+.round-content {
+    height: 238px;
     background-color: #36c28e;
-    border-radius: 50%;
-    right: 173px;
-    box-shadow: 0px 0px 100px -80px;
-    top: -120px;
-    padding: 69px 47px;
     color: #fff;
-    transform: rotate(
--16deg
-);
-    letter-spacing: 1px;
-    font-size: 23px;
-    width: 18%;
-    word-break: break-word;
+    width: 26%;
+    padding: 52px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    top: -153%;
     text-align: center;
+    font-size: 20px;
+    transform: rotate(
+-17deg
+);
+    line-height: 41px;
 }
 
 
@@ -124,8 +124,9 @@ h1.col-section-3-headeing {
     font-size: 33px !important;
     font-weight: 700 !important;
     color: #444 !important;
+    margin: 0 auto;
+    width: 53%;
 }
-
 .section-3-inner-padding {
     padding-bottom: 80px;
 }

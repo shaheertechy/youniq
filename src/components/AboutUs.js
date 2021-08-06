@@ -30,7 +30,7 @@ const AboutUs = () => {
                                 <h1>{t('Your Unique Piece of Art:')}</h1>
                                 <h2>
                                     {t('Youniq.Art besteht aus einem')} <br />
-                                    {t('Team von Kunsthistoriker innen')}</h2>
+                                    <span className="colored-green">{t('Team von Kunsthistoriker innen')}</span></h2>
                             </div>
                         </div>
                     </div>
@@ -47,7 +47,7 @@ const AboutUs = () => {
               <div className="col-md 7">
                 <div className="pera">
                   <p>«{t("aboutus_paragraph_1")}</p>
-                  <div className="ankr"><a href="#">{t('aboutus_link_1')}</a></div>
+                  <div className="ankr"><a href="/how-it-works">{t('aboutus_link_1')}</a></div>
                 </div>
               </div>
             </div>
@@ -64,7 +64,7 @@ const AboutUs = () => {
               <div className="col-md 7">
                 <div className="pera">
                   <p>{t('aboutus_paragraph_2')} </p>
-                  <div className="ankr"><a href="#">{t('aboutus_link_2')} </a></div>
+                  <div className="ankr"><a href="/find-your-style">{t('aboutus_link_2')} </a></div>
                 </div>
               </div>
             </div>

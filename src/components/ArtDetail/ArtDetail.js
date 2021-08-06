@@ -133,8 +133,8 @@ const ArtDetail = (props) => {
                                                 {isLoader ? <Loader /> : products.map((product, index) => {
 
                                                     return (
-                                                        <li key={index} className="for-slider-li d-inline for-border">
-                                                            <img onClick={() => onClickImage(product.imageUrl, product.maxHeight, product.maxWidth, product)} className="for-box-border" src={product.imageUrl} />
+                                                        <li key={index} className="for-slider-li d-inline for-border ">
+                                                            <img  onClick={() => onClickImage(product.imageUrl, product.maxHeight, product.maxWidth, product)} className="for-box-border" src={product.imageUrl} />
                                                         </li>
                                                     )
                                                 })}
@@ -148,7 +148,7 @@ const ArtDetail = (props) => {
                                     <div className="for-img-slider">
                                         <ul className="for-slider-ul">
                                             <li className="for-icon d-inline for-css">
-                                                <a href="#"><i className="fa fa-plus imgAdd" /></a>
+                                                {/* <a href="#"><i className="fa fa-plus imgAdd" /></a> */}
                                             </li>
                                             <li className="for-slider-li d-inline for-border">
                                                 <img className="demo cursor for-border-radius" src="/img/b1.jpeg" style={{ width: '19%' }} onClick={() => onClickMainImage('/img/b1.jpeg')} />
