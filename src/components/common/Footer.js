@@ -16,16 +16,16 @@ const Footer = (props) => {
                         <div className="col-md-2">
                             <div className="number">
                                 <h1>+41 34 810 03 49
-                                    contect@youniq.com
+                                contact@youniq.art
                                 </h1>
                             </div>
                         </div>
                         <div className="col-md-8" />
                         <div className="col-md-2">
                             <div className="number">
-                                <h1><span className="underline"> {props.t("kontakt")}<br />
-                                    {props.t("Datenschutzerklarung")}<br />
-                                    {props.t("Impressum")}
+                                <h1><span className="underline"><a href="#"> {props.t("kontakt")}</a><br />
+                                    <a href="#">{props.t("Datenschutzerklarung")}</a><br />
+                                   <a href="#"> {props.t("Impressum")}</a>
                                 </span></h1>
                             </div>
                         </div>

@@ -31,7 +31,7 @@ const AboutUs = () => {
                                 <h1>{t('Your Unique Piece of Art:')}</h1>
                                 <h2>
                                     {t('Youniq.Art besteht aus einem')} <br />
-                                    {t('Team von Kunsthistoriker innen')}</h2>
+                                    <span className="colored-green">{t('Team von Kunsthistoriker innen')}</span></h2>
                             </div>
                         </div>
                     </div>

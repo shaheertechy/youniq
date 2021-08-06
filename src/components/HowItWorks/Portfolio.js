@@ -12,7 +12,7 @@ const Portfolio = () => {
                                 <h1 className="col-section-3-headeing">{t('Onlineportfilio')}</h1>
                             </div>
                             <div className="col-md-7">
-                                <p className="col-section-3-pera for-pera-color">{t('portfolio_text_1')}</p>
+                                <p className="col-section-3-pera for-pera-color">{t('portfolio-content')}</p>
                             </div>
                         </div>
                         <div className="row section-3-inner-padding">
@@ -20,7 +20,7 @@ const Portfolio = () => {
                                 <h1 className="col-section-3-headeing">{t('Unsere Talente')}</h1>
                             </div>
                             <div className="col-md-7">
-                                <p className="col-section-3-pera for-pera-color">{t('portfolio_text_2')}</p>
+                                <p className="col-section-3-pera for-pera-color">{t('talent-content')}</p>
                             </div>
                         </div>
                         <div className="row section-3-inner-padding">
@@ -28,7 +28,7 @@ const Portfolio = () => {
                                 <h1 className="col-section-3-headeing">{t('Massgeschneidert')}</h1>
                             </div>
                             <div className="col-md-7">
-                                <p className="col-section-3-pera for-pera-color">{t('portfolio_text_3')}</p>
+                                <p className="col-section-3-pera for-pera-color">{t('message-content')}</p>
                             </div>
                         </div>
                     </div>
