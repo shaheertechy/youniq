@@ -7,10 +7,13 @@ import { useHistory } from 'react-router-dom';
 
 const ArtDetailStepThree = (props) => {
     const history = useHistory();
+    const [orderSucceed, setOrderSucceed] = useState(false);
+    const [isSubmit, setIsSubmit] = useState(false);
     const {
         register,
         handleSubmit,
         watch,
+        reset,
         formState: { errors }
     } = useForm();
 
@@ -29,22 +32,13 @@ const ArtDetailStepThree = (props) => {
     }
 
     const onSubmit = (data) => {
-        // alert(JSON.stringify(data));
-
-        // delete data['address1'];
-        // delete data['address2'];
-        // delete data['productId'];
-        // delete data['artImage'];
-        // delete data['artImage'];
-        // data.address = 'abcds';
-        // data.frameType = 'frame1';
      
+        setIsSubmit(true);
          var order = {...data, ...props.location.state};
-         console.log("Order", order);
         const requestOptions = {
             method: 'POST',
             headers: {
-                'Content-Type': '*/*',
+                'Content-Type': 'application/json',
                 'Accept': '*/*'                                                    
             },
             body: JSON.stringify({
@@ -57,8 +51,8 @@ const ArtDetailStepThree = (props) => {
                 "height":order.height,
                 "name":order.name,
                 "phone":order.phone,
-                "postalCode":"08000",
-               // "customImage": order.customImage,
+                "postalCode":order.address2,
+                "customImage": order.customImage,
                 "productId":order.productId,
                 "surname":order.surname,
                 "useCustomImage":order.useCustomImage,
@@ -67,26 +61,21 @@ const ArtDetailStepThree = (props) => {
               })
         };
 
-        alert(JSON.stringify(requestOptions));
+    
         fetch(process.env.REACT_APP_BASE_URL+'action/order', requestOptions)
             .then(response => {
-                alert(response.status);
-                if (response.status == 200) {   // *** This can be just `if (response.ok) {`
-                    console.log(response);      // *** This is premature
-                    return response.json();
+                if(response.status == 200){
+                    setOrderSucceed(true);
+                    reset();
+                    setIsSubmit(false);
                 }
-                else
-                {
-                    throw `error with status ${response.status}`;
-                }
-                console.log(response.json());
+              
             })
             .then(data => {
                 console.log(data);
             })
             .catch(error => {
-                alert(error.message)
-                console.log(error.message);
+            
             });
     }; // your form submit function which will invoke after successful validation
 
@@ -98,7 +87,7 @@ const ArtDetailStepThree = (props) => {
     return (
         <React.Fragment>
             <section className="container-fluid w1">
-                <Header changeLanguage={changeLanguage} currentLanguageVersion={currentLanguageVersion} lng={lng} />
+                <Header />
                 <section className="container">
                     <div className="row">
                         <div className="col-md-12">
@@ -112,6 +101,7 @@ const ArtDetailStepThree = (props) => {
             <section className="container-fluid w2">
                 <section className="container">
                     <div className="row">
+                       
                         <div className="col-md-3">
                         </div>
                         <div className="col-md-9">
@@ -128,8 +118,12 @@ const ArtDetailStepThree = (props) => {
             <section className="container-fluid w3">
                 <section className="container">
                     <div className="row">
+                        
                         <div className="col-md-12">
                             <div className="form">
+                          
+                           {orderSucceed ? <p className="alert alert-success" > Order has been completed</p> : ''} 
+                      
                                 <h1>{t('kontaktangaben')}</h1>
                                 <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -224,6 +218,13 @@ const ArtDetailStepThree = (props) => {
                                             type="text"
                                         />
                                         {errors.country && <p className="alert alert-danger">{errors.country.message}</p>} 
+                                        <br />
+                                        <input type="checkbox" className="form1"
+                                            {...register("termsAndCondition", {
+                                                required: "required",
+                                            })} className="cbox" />
+                                        <label for="vehicle1">lch akzeptiere die <span class="agb">AGBs</span></label><br />
+                                        {errors.termsAndCondition && <p className="alert alert-danger">Terms And Condition is required</p>} 
                                         {/* <input type="text" pattern="[A-Za-z ]{3,}" placeholder="  Nachname" required className="form5" />
                                     <input type="text" pattern="[A-Za-z0-9.@ ]{3,}" placeholder="  E-Mail" name="wasi" required className="form3" />
                                     <input type="text"  placeholder="  Telefonnummer" required className="form2" />
@@ -233,13 +234,13 @@ const ArtDetailStepThree = (props) => {
                                     <br />
                                     <input type="checkbox" id="vehicle1" name="vehicle1" defaultValue="Bike" className="cbox" />
                                     <label htmlFor="vehicle1">lch akzeptiere die <span className="agb">AGBs</span></label><br /> */}
-                                        <div className="ankr"><input type={'submit'} value={t('Anfrage abschicken')} /></div>
+                                        <div className="ankr">{isSubmit ? <React.Fragment><i className="fa fa-spinner fa-spin"></i>Loading </React.Fragment> : <input type={'submit'} value={t('Anfrage abschicken')} />}</div>
                                     </div>
                                 </form>
                             </div>
                             <div className="art-detail-chf-right">
-                              <sub>Preis</sub>
-                              <h1>2815<span></span>CHF</h1>
+                              <sub>{t('Preis')}</sub>
+                              <h1>{props.location.state.productPrice}<span></span>CHF</h1>
                             </div>
                         </div>
                     </div>

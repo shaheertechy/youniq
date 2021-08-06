@@ -8,7 +8,7 @@ import TabProductContent from './TabProductContent';
 const ProductTabs = () => {
     const [categories, setCategories] = useState([]);
     const [isLoader, setIsLoader] = useState(true);
-    const [key, setKey] = useState(1);
+    const [key, setKey] = useState(0);
  
     const [products, setProducts] = useState({});
     const onClickOnTab = (tab) => {
@@ -44,6 +44,9 @@ const ProductTabs = () => {
                 activeKey={key}
                 onSelect={(k) => onClickOnTab(k)}
             >
+                <Tab eventKey={0} title={'All'} >
+                            <TabProductContent categoryId={0} />
+                        </Tab>
                 {categories.map(function (category, index) {
                     
                     return (<Tab eventKey={category.id} title={category.name} >

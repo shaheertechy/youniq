@@ -26,7 +26,7 @@ const Home = () => {
 
             <section className="wrapp1">
                 <div className="container-fluid ten1">
-                    <Header changeLanguage={changeLanguage} currentLanguageVersion={currentLanguageVersion} lng={lng} />
+                    <Header />
                     <Banner />
                 </div>
             </section>

@@ -173,7 +173,7 @@ const ArtDetailStepTwo = (props) => {
     return (
         <React.Fragment>
             <section className="container-fluid w1">
-                <Header changeLanguage={changeLanguage} currentLanguageVersion={currentLanguageVersion} lng={lng} />
+                <Header />
                 <section className="container">
                     <div className="row">
                         <div className="col-md-12">
@@ -192,8 +192,8 @@ const ArtDetailStepTwo = (props) => {
                         </div>
                         <div className="col-md-9">
                             <div className="arrow">
-                               <a href="make-your-youniq/26"> <i className="fa fa-angle-left" />
-                                <h1 onClick={() => history.goBack()}>{t('Zurück')} </h1></a>
+                               <a onClick={() => history.goBack()}> <i className="fa fa-angle-left" />
+                                <h1 >{t('Zurück')} </h1></a>
                             </div>
                             <div className="theory2">
                             </div>
@@ -318,13 +318,13 @@ const ArtDetailStepTwo = (props) => {
                                 <div className="row">
                                     <div className="col-md-6">
                                         <div className="textmrg4">
-                                            <div className="box1">
+                                            <div className={frameType == 'frame1' ? 'box1 active' : 'box1'}>
                                                 <div onClick={() => setFrameType('frame1')} className="lbox1" />
                                             </div>
-                                            <div className="box1">
+                                            <div className={frameType == 'frame2' ? 'box1 active' : 'box1'}>
                                                 <div onClick={() => setFrameType('frame2')} className="lbox1" />
                                             </div>
-                                            <div className="box1">
+                                            <div className={frameType == 'frame3' ? 'box1 active' : 'box1'}>
                                                 <div onClick={() => setFrameType('frame3')} className="lbox2" />
                                             </div>
                                         </div>
