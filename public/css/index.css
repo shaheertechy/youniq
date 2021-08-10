@@ -3,12 +3,20 @@
 ***************************************/
 
 .carousel-fade .carousel-control-next .carousel-control-next-icon {
-    background-image: url(../images/download.svg !important;)
+    background-image: url(../images/download.svg) !important;
+    width: 11px !important;
 }
 .carousel-fade .carousel-control-next {
     right: 0;
     top: 121% !important;
-    background-color: #bfdabf !important;
+    background-color: #7eb47e !important;
+}
+.carousel-fade .carousel-control-prev-icon {
+    background-image: url(../images/download2.svg) !important;
+    width: 11px !important;
+}
+nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+    background-color: #f0f8ff00 !important;
 }
 @import url("https://use.typekit.net/ipw5bij.css");
 
