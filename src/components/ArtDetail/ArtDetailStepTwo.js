@@ -303,11 +303,11 @@ const ArtDetailStepTwo = (props) => {
                                             <input type="checkbox" id="vehicle1" name="useCustomImage" checked={useCustomImage} onChange={handleOnChangeCheckBox}  className="cbox" />
                                             <label htmlFor="vehicle1"><span className="agb">{t('Motiv aus dem hochgeladenen Bild')}</span></label>
                                             <br />
-                                            <input type="checkbox" id="vehicle1" name="wouldLikeToBeSurprised" onChange={handleOnChangeCheckBox} checked={wouldLikeToBeSurprised} className="cbox" />
+                                            <input type="checkbox" id="vehicle2" name="wouldLikeToBeSurprised" onChange={handleOnChangeCheckBox} checked={wouldLikeToBeSurprised} className="cbox" />
                                             <label htmlFor="vehicle1"><span className="agb">{t('Ich möchte überrascht werden')}</span></label>
                                             <br/>
-                                            <input type="checkbox" id="vehicle1" name="newcheck" onChange={handleOnChangeCheckBox} checked={wouldLikeToBeSurprised} className="cbox" />
-                                            <label htmlFor="vehicle1"><span className="agb">{t('Ich möchte überrascht werden')}</span></label>
+                                            <input type="checkbox" id="vehicle3" name="newcheck"  className="cbox" />
+                                            <label htmlFor="vehicle1"><span className="agb">{t('Das Motiv aus dem')}</span></label>
                                         </div>
                                     </div>
                                 </div>
